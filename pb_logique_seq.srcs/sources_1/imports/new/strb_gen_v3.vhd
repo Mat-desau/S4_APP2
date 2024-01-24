@@ -37,6 +37,7 @@ entity strb_gen is
                   
 end strb_gen;
 
+
 architecture Behavioral of strb_gen is
 
  signal qstrobe : std_logic := '0';
