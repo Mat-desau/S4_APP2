@@ -52,9 +52,9 @@ BEGIN
         o_strobe_btn  => d_strobe_btn  
          );
  
- process(clk)
+ process(o_selection_fct_temp, d_strobe_btn)
  begin
-    if(rising_edge(clk)) then
+    if d_strobe_btn(1 downto 0) = "00" or d_strobe_btn(1 downto 0) = "01" or d_strobe_btn(1 downto 0) = "10" then
         case o_selection_fct_temp is
             when "00" => 
                 if d_strobe_btn(0) = '1' then
@@ -90,14 +90,21 @@ BEGIN
                 end if;
             when others => o_selection_fct <= "00";
         end case;
+    else
+         o_selection_fct <= o_selection_fct_temp;
+    end if;
+ end process;
+ 
+ process(clk)
+ begin
+    if(rising_edge(clk)) then
         o_reset <= d_reset;
     end if;
  end process;
  
-   o_selection_fct_temp <= o_selection_fct_temp;
    o_btn_cd             <= d_btn_cd;
    o_selection_par      <= i_sw(1 downto 0); -- mode de selection du parametre par sw
-   o_selection_fct      <= i_sw(3 downto 2); -- mode de selection de la fonction par sw
+   -- o_selection_fct      <= i_sw(3 downto 2); -- mode de selection de la fonction par sw
    d_reset              <= i_btn(3);         -- pas de contionnement particulier sur reset
 
 END BEHAVIOR;
