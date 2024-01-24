@@ -1,0 +1,401 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:45 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 1456
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Jan 24 13:04:44 EST 2024
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	C:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2
+Java executable location: 	C:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	desm1210
+User home directory: C:/Users/desm1210
+User working directory: K:/S4_APP2
+User country: 	CA
+User language: 	fr
+User locale: 	fr_CA
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2020.2
+RDI_DATADIR: C:/Xilinx/Vivado/2020.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2020.2/bin
+
+Vivado preferences file location: C:/Users/desm1210/AppData/Roaming/Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: C:/Users/desm1210/AppData/Roaming/Xilinx/Vivado/2020.2/
+Vivado layouts directory: C:/Users/desm1210/AppData/Roaming/Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	K:/S4_APP2/vivado.log
+Vivado journal file location: 	K:/S4_APP2/vivado.jou
+Engine tmp dir: 	K:/S4_APP2/.Xil/Vivado-1456-gegi-3014-16win
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: 6062@xilinx.gegi.usherbrooke.ca
+XILINX_DSP: C:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2020.2
+XILINX_SDK: C:/Xilinx/Vitis/2020.2
+XILINX_VITIS: C:/Xilinx/Vitis/2020.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2020.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2020.2
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,041 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 103 MB (+106047kb) [00:00:13]
+// [Engine Memory]: 1,041 MB (+939710kb) [00:00:13]
+// bz (cr):  Open Project : addNotify
+// Opening Vivado Project: K:\S4_APP2\pb_logique_seq.xpr. Version: Vivado v2020.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project K:/S4_APP2/pb_logique_seq.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,041 MB. GUI used memory: 48 MB. Current time: 1/24/24, 1:04:45 PM EST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  5603 ms.
+// Tcl Message: open_project K:/S4_APP2/pb_logique_seq.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/PC/Documents/GitHub/S4_APP2' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'. 
+// Project name: pb_logique_seq; location: K:/S4_APP2; part: xc7z010clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1076.344 ; gain = 0.000 
+dismissDialog("Open Project"); // bz
+// [GUI Memory]: 109 MB (+250kb) [00:00:38]
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3307 ms. Increasing delay to 9921 ms.
+// [GUI Memory]: 121 MB (+6882kb) [00:01:10]
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 607ms to process. Increasing delay to 3000 ms.
+// TclEventType: DG_GRAPH_STALE
+// [GUI Memory]: 131 MB (+4283kb) [00:01:53]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 111 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cr):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: open_bd_design {K:/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd} 
+// Tcl Message: Reading block design file <K:/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd>... 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  3301 ms.
+// Elapsed time: 21 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1076.344 ; gain = 0.000 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,091 MB. GUI used memory: 79 MB. Current time: 1/24/24, 1:07:16 PM EST
+// 'bF' command handler elapsed time: 22 seconds
+// [Engine Memory]: 1,095 MB (+2680kb) [00:02:49]
+dismissDialog("Open Block Design"); // bz
+// Elapsed time: 16 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ac
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // ah
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // ah
+selectMenuItem(RDIResourceCommand.RDICommands_RUN_SCRIPT, "Run Tcl Script..."); // ak
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ac
+// Run Command: RDIResourceCommand.RDICommands_RUN_SCRIPT
+// Elapsed time: 25 seconds
+setFileChooser("K:/S4_APP2/schema.tcl");
+// Source Tcl File: 'K:/S4_APP2/schema.tcl'
+// Tcl Command: 'source K:/S4_APP2/schema.tcl'
+// bz (cr):  Source Tcl Script : addNotify
+// TclEventType: HIGHLIGHT_ADD
+// TclEventType: RSB_CANVAS_LOCATION
+// HMemoryUtils.trashcanNow. Engine heap size: 1,129 MB. GUI used memory: 82 MB. Current time: 1/24/24, 1:08:05 PM EST
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: source K:/S4_APP2/schema.tcl 
+dismissDialog("Source Tcl Script"); // bz
+// [GUI Memory]: 140 MB (+2221kb) [00:08:16]
+// Elapsed time: 1065 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aK
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // D
+// Elapsed time: 352 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 10 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k
+closeTask("IP Integrator", "Block Design", "DesignTask.IP_INTEGRATOR");
+// A (cr): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Confirm Close"); // A
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cr):  Open Block Design : addNotify
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {K:/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd} 
+dismissDialog("Open Block Design"); // bz
+// HMemoryUtils.trashcanNow. Engine heap size: 1,137 MB. GUI used memory: 85 MB. Current time: 1/24/24, 1:38:05 PM EST
+// Elapsed time: 406 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd)]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 28 seconds
+selectCodeEditor("module_commande.vhd", 623, 465); // bP
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd), inst_cond_btn : conditionne_btn_v7(Behavioral) (conditionne_btn_v7.vhd), inst_strb_bit : strb_gen(Behavioral) (strb_gen_v3.vhd)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd), inst_cond_btn : conditionne_btn_v7(Behavioral) (conditionne_btn_v7.vhd), inst_strb_bit : strb_gen(Behavioral) (strb_gen_v3.vhd)]", 4, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd), inst_cond_btn : conditionne_btn_v7(Behavioral) (conditionne_btn_v7.vhd)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd), inst_cond_btn : conditionne_btn_v7(Behavioral) (conditionne_btn_v7.vhd)]", 3, true, false, false, false, false, true); // D - Double Click - Node
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd)]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd), inst_cond_btn : conditionne_btn_v7(Behavioral) (conditionne_btn_v7.vhd), inst_strb_bit : strb_gen(Behavioral) (strb_gen_v3.vhd)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd), inst_cond_btn : conditionne_btn_v7(Behavioral) (conditionne_btn_v7.vhd), inst_strb_bit : strb_gen(Behavioral) (strb_gen_v3.vhd)]", 4, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("strb_gen_v3.vhd", 102, 353); // bP
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd), inst_cond_btn : conditionne_btn_v7(Behavioral) (conditionne_btn_v7.vhd)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd), inst_cond_btn : conditionne_btn_v7(Behavioral) (conditionne_btn_v7.vhd)]", 3, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 54 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, module_commande(BEHAVIOR) (module_commande.vhd)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 20 seconds
+selectCodeEditor("module_commande.vhd", 173, 624); // bP
+selectCodeEditor("module_commande.vhd", 539, 615); // bP
+selectCodeEditor("module_commande.vhd", 541, 628); // bP
+selectCodeEditor("module_commande.vhd", 376, 643); // bP
+selectCodeEditor("module_commande.vhd", 109, 621); // bP
+selectCodeEditor("module_commande.vhd", 195, 517); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("module_commande.vhd", 175, 659); // bP
+selectCodeEditor("module_commande.vhd", 375, 263); // bP
+selectCodeEditor("module_commande.vhd", 376, 263); // bP
+selectCodeEditor("module_commande.vhd", 64, 189); // bP
+selectCodeEditor("module_commande.vhd", 182, 194); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("module_commande.vhd", 106, 197); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("module_commande.vhd", 91, 537); // bP
+// Elapsed time: 16 seconds
+selectCodeEditor("module_commande.vhd", 220, 505); // bP
+// Elapsed time: 48 seconds
+selectCodeEditor("module_commande.vhd", 131, 115); // bP
+selectCodeEditor("module_commande.vhd", 369, 636); // bP
+selectCodeEditor("module_commande.vhd", 323, 614); // bP
+selectCodeEditor("module_commande.vhd", 538, 616); // bP
+selectCodeEditor("module_commande.vhd", 395, 623); // bP
+selectCodeEditor("module_commande.vhd", 574, 640); // bP
+selectCodeEditor("module_commande.vhd", 126, 500); // bP
+// Elapsed time: 64 seconds
+selectCodeEditor("module_commande.vhd", 239, 500); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("module_commande.vhd", 196, 500); // bP
+selectCodeEditor("module_commande.vhd", 37, 259); // bP
+// Elapsed time: 23 seconds
+selectCodeEditor("module_commande.vhd", 351, 265); // bP
+selectCodeEditor("module_commande.vhd", 236, 354); // bP
+selectCodeEditor("module_commande.vhd", 74, 265); // bP
+typeControlKey((HResource) null, "module_commande.vhd", 'c'); // bP
+selectCodeEditor("module_commande.vhd", 87, 555); // bP
+typeControlKey((HResource) null, "module_commande.vhd", 'v'); // bP
+selectCodeEditor("module_commande.vhd", 84, 555); // bP
+selectCodeEditor("module_commande.vhd", 120, 572); // bP
+selectCodeEditor("module_commande.vhd", 90, 555); // bP
+typeControlKey((HResource) null, "module_commande.vhd", 'c'); // bP
+selectCodeEditor("module_commande.vhd", 125, 567); // bP
+typeControlKey((HResource) null, "module_commande.vhd", 'v'); // bP
+typeControlKey((HResource) null, "module_commande.vhd", 'v'); // bP
+selectCodeEditor("module_commande.vhd", 115, 568); // bP
+selectCodeEditor("module_commande.vhd", 295, 568); // bP
+selectCodeEditor("module_commande.vhd", 298, 569); // bP
+// Elapsed time: 51 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "conditionne_btn_v7.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "strb_gen_v3.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "module_commande.vhd", 2); // m
+// Elapsed time: 26 seconds
+typeControlKey((HResource) null, "module_commande.vhd", 'v'); // bP
+// Elapsed time: 34 seconds
+typeControlKey((HResource) null, "module_commande.vhd", 'v'); // bP
+// Elapsed time: 17 seconds
+selectCodeEditor("module_commande.vhd", 150, 657); // bP
+selectCodeEditor("module_commande.vhd", 318, 677); // bP
+selectCodeEditor("module_commande.vhd", 166, 636); // bP
+selectCodeEditor("module_commande.vhd", 166, 639); // bP
+typeControlKey((HResource) null, "module_commande.vhd", 'c'); // bP
+selectCodeEditor("module_commande.vhd", 166, 628); // bP
+selectCodeEditor("module_commande.vhd", 308, 620); // bP
+// Elapsed time: 30 seconds
+selectCodeEditor("module_commande.vhd", 205, 692); // bP
+selectCodeEditor("module_commande.vhd", 37, 584); // bP
+// Elapsed time: 32 seconds
+selectCodeEditor("module_commande.vhd", 173, 667); // bP
+selectCodeEditor("module_commande.vhd", 162, 467); // bP
+typeControlKey((HResource) null, "module_commande.vhd", 'c'); // bP
+selectCodeEditor("module_commande.vhd", 166, 471); // bP
+typeControlKey((HResource) null, "module_commande.vhd", 'v'); // bP
+selectCodeEditor("module_commande.vhd", 138, 478); // bP
+selectCodeEditor("module_commande.vhd", 292, 517); // bP
+selectCodeEditor("module_commande.vhd", 293, 545); // bP
+selectCodeEditor("module_commande.vhd", 176, 603); // bP
+typeControlKey((HResource) null, "module_commande.vhd", 'v'); // bP
+selectCodeEditor("module_commande.vhd", 136, 483); // bP
+selectCodeEditor("module_commande.vhd", 131, 484); // bP
+selectCodeEditor("module_commande.vhd", 289, 514); // bP
+selectCodeEditor("module_commande.vhd", 289, 551); // bP
+// Elapsed time: 45 seconds
+selectCodeEditor("module_commande.vhd", 162, 556); // bP
+typeControlKey((HResource) null, "module_commande.vhd", 'v'); // bP
+selectCodeEditor("module_commande.vhd", 138, 567); // bP
+selectCodeEditor("module_commande.vhd", 288, 602); // bP
+selectCodeEditor("module_commande.vhd", 289, 589); // bP
+selectCodeEditor("module_commande.vhd", 287, 587); // bP
+selectCodeEditor("module_commande.vhd", 290, 587, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("module_commande.vhd", 293, 591); // bP
+selectCodeEditor("module_commande.vhd", 340, 647); // bP
+// Elapsed time: 22 seconds
+selectCodeEditor("module_commande.vhd", 81, 213); // bP
+selectCodeEditor("module_commande.vhd", 225, 224); // bP
+selectCodeEditor("module_commande.vhd", 269, 223); // bP
+selectCodeEditor("module_commande.vhd", 283, 242); // bP
+selectCodeEditor("module_commande.vhd", 180, 266); // bP
+selectCodeEditor("module_commande.vhd", 292, 263); // bP
+selectCodeEditor("module_commande.vhd", 122, 308); // bP
+selectCodeEditor("module_commande.vhd", 200, 309); // bP
+selectCodeEditor("module_commande.vhd", 336, 311); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("module_commande.vhd", 122, 159); // bP
+selectCodeEditor("module_commande.vhd", 469, 275); // bP
+selectCodeEditor("module_commande.vhd", 172, 129); // bP
+selectCodeEditor("module_commande.vhd", 180, 149); // bP
+// Elapsed time: 17 seconds
+selectCodeEditor("module_commande.vhd", 348, 654); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("module_commande.vhd", 567, 685); // bP
+selectCodeEditor("module_commande.vhd", 214, 656); // bP
+selectCodeEditor("module_commande.vhd", 458, 654); // bP
+selectCodeEditor("module_commande.vhd", 460, 654); // bP
+selectCodeEditor("module_commande.vhd", 436, 160); // bP
+selectCodeEditor("module_commande.vhd", 442, 159); // bP
+selectCodeEditor("module_commande.vhd", 483, 280); // bP
+selectCodeEditor("module_commande.vhd", 380, 431); // bP
+selectCodeEditor("module_commande.vhd", 362, 611); // bP
+selectCodeEditor("module_commande.vhd", 131, 602); // bP
+selectCodeEditor("module_commande.vhd", 129, 621); // bP
+typeControlKey(null, null, 'z');
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE

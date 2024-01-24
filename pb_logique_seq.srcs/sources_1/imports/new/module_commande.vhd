@@ -35,7 +35,7 @@ generic (nbtn : integer := nbtn;  mode_simul: std_logic := '0');
          );
 end component;
 
-
+    signal o_selection_fct_temp : std_logic_vector (1 downto 0) := "00";
     signal d_strobe_btn :    std_logic_vector (nbtn-1 downto 0);
     signal d_btn_cd     :    std_logic_vector (nbtn-1 downto 0); 
     signal d_reset      :    std_logic;
@@ -55,14 +55,49 @@ BEGIN
  process(clk)
  begin
     if(rising_edge(clk)) then
+        case o_selection_fct_temp is
+            when "00" => 
+                if d_strobe_btn(0) = '1' then
+                    o_selection_fct <= "01";
+                elsif d_strobe_btn(1) = '1' then
+                    o_selection_fct <= "11";
+                else 
+                    o_selection_fct <= o_selection_fct_temp;
+                end if;
+            when "01" => 
+                if d_strobe_btn(0) = '1' then
+                    o_selection_fct <= "10";
+                elsif d_strobe_btn(1) = '1' then
+                    o_selection_fct <= "00";
+                else 
+                    o_selection_fct <= o_selection_fct_temp;
+                end if;
+            when "10" => 
+                if d_strobe_btn(0) = '1' then
+                    o_selection_fct <= "11";
+                elsif d_strobe_btn(1) = '1' then
+                    o_selection_fct <= "01";
+                else 
+                    o_selection_fct <= o_selection_fct_temp;
+                end if;
+            when "11" => 
+                if d_strobe_btn(0) = '1' then
+                    o_selection_fct <= "00";
+                elsif d_strobe_btn(1) = '1' then
+                    o_selection_fct <= "10";
+                else 
+                    o_selection_fct <= o_selection_fct_temp;
+                end if;
+            when others => o_selection_fct <= "00";
+        end case;
         o_reset <= d_reset;
     end if;
  end process;
  
- 
-   o_btn_cd        <= d_btn_cd;
-   o_selection_par <= i_sw(1 downto 0); -- mode de selection du parametre par sw
-   o_selection_fct <= i_sw(3 downto 2); -- mode de selection de la fonction par sw
-   d_reset         <= i_btn(3);         -- pas de contionnement particulier sur reset
+   o_selection_fct_temp <= o_selection_fct_temp;
+   o_btn_cd             <= d_btn_cd;
+   o_selection_par      <= i_sw(1 downto 0); -- mode de selection du parametre par sw
+   o_selection_fct      <= i_sw(3 downto 2); -- mode de selection de la fonction par sw
+   d_reset              <= i_btn(3);         -- pas de contionnement particulier sur reset
 
 END BEHAVIOR;

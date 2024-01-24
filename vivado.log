@@ -2,94 +2,90 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Jan 24 12:21:02 2024
-# Process ID: 14496
-# Current directory: C:/Users/PC/Documents/GitHub/S4_APP2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15064 C:\Users\PC\Documents\GitHub\S4_APP2\pb_logique_seq.xpr
-# Log file: C:/Users/PC/Documents/GitHub/S4_APP2/vivado.log
-# Journal file: C:/Users/PC/Documents/GitHub/S4_APP2\vivado.jou
+# Start of session at: Wed Jan 24 13:03:57 2024
+# Process ID: 1456
+# Current directory: K:/S4_APP2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15836 K:\S4_APP2\pb_logique_seq.xpr
+# Log file: K:/S4_APP2/vivado.log
+# Journal file: K:/S4_APP2\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/rosj2103/Downloads/pb_logique_seq' since last save.
+open_project K:/S4_APP2/pb_logique_seq.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/PC/Documents/GitHub/S4_APP2' since last save.
 Scanning sources...
 Finished scanning sources
-WARNING: [Project 1-509] GeneratedRun file for 'design_1_reg_dec_24b_0_0_synth_1' not found
-WARNING: [Project 1-509] GeneratedRun file for 'design_1_compteur_nbits_0_1_synth_1' not found
-WARNING: [Project 1-509] GeneratedRun file for 'design_1_calcul_param_1_0_0_synth_1' not found
-WARNING: [Project 1-509] GeneratedRun file for 'design_1_calcul_param_2_0_0_synth_1' not found
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
-WARNING: [IP_Flow 19-3664] IP 'design_1_compteur_nbits_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_compteur_nbits_0_0/design_1_compteur_nbits_0_0.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_compteur_nbits_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_compteur_nbits_0_0/design_1_compteur_nbits_0_0_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_compteur_nbits_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_compteur_nbits_0_0/design_1_compteur_nbits_0_0_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_compteur_nbits_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_compteur_nbits_0_0/design_1_compteur_nbits_0_0_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_compteur_nbits_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_compteur_nbits_0_0/design_1_compteur_nbits_0_0_sim_netlist.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mef_decod_i2s_v1b_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_decod_i2s_v1b_0_0/design_1_mef_decod_i2s_v1b_0_0.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mef_decod_i2s_v1b_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_decod_i2s_v1b_0_0/design_1_mef_decod_i2s_v1b_0_0_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mef_decod_i2s_v1b_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_decod_i2s_v1b_0_0/design_1_mef_decod_i2s_v1b_0_0_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mef_decod_i2s_v1b_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_decod_i2s_v1b_0_0/design_1_mef_decod_i2s_v1b_0_0_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mef_decod_i2s_v1b_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_decod_i2s_v1b_0_0/design_1_mef_decod_i2s_v1b_0_0_sim_netlist.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_0/design_1_reg_24b_0_0.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_0/design_1_reg_24b_0_0_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_0/design_1_reg_24b_0_0_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_0/design_1_reg_24b_0_0_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_0/design_1_reg_24b_0_0_sim_netlist.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_1' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_1/design_1_reg_24b_0_1.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_1' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_1/design_1_reg_24b_0_1_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_1' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_1/design_1_reg_24b_0_1_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_1' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_1/design_1_reg_24b_0_1_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_1' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_1/design_1_reg_24b_0_1_sim_netlist.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mef_cod_i2s_vsb_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_cod_i2s_vsb_0_0/design_1_mef_cod_i2s_vsb_0_0.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mef_cod_i2s_vsb_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_cod_i2s_vsb_0_0/design_1_mef_cod_i2s_vsb_0_0_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mef_cod_i2s_vsb_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_cod_i2s_vsb_0_0/design_1_mef_cod_i2s_vsb_0_0_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mef_cod_i2s_vsb_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_cod_i2s_vsb_0_0/design_1_mef_cod_i2s_vsb_0_0_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mef_cod_i2s_vsb_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_cod_i2s_vsb_0_0/design_1_mef_cod_i2s_vsb_0_0_sim_netlist.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_reg_dec_24b_fd_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_dec_24b_fd_0_0/design_1_reg_dec_24b_fd_0_0.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_reg_dec_24b_fd_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_dec_24b_fd_0_0/design_1_reg_dec_24b_fd_0_0_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_reg_dec_24b_fd_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_dec_24b_fd_0_0/design_1_reg_dec_24b_fd_0_0_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_reg_dec_24b_fd_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_dec_24b_fd_0_0/design_1_reg_dec_24b_fd_0_0_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_reg_dec_24b_fd_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_dec_24b_fd_0_0/design_1_reg_dec_24b_fd_0_0_sim_netlist.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_util_vector_logic_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_util_vector_logic_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_util_vector_logic_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_util_vector_logic_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_util_vector_logic_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_sim_netlist.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_affhexPmodSSD_v3_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_affhexPmodSSD_v3_0_0/design_1_affhexPmodSSD_v3_0_0.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_affhexPmodSSD_v3_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_affhexPmodSSD_v3_0_0/design_1_affhexPmodSSD_v3_0_0_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_affhexPmodSSD_v3_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_affhexPmodSSD_v3_0_0/design_1_affhexPmodSSD_v3_0_0_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_affhexPmodSSD_v3_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_affhexPmodSSD_v3_0_0/design_1_affhexPmodSSD_v3_0_0_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_affhexPmodSSD_v3_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_affhexPmodSSD_v3_0_0/design_1_affhexPmodSSD_v3_0_0_sim_netlist.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_calcul_param_3_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_calcul_param_3_0_0/design_1_calcul_param_3_0_0.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_calcul_param_3_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_calcul_param_3_0_0/design_1_calcul_param_3_0_0_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_calcul_param_3_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_calcul_param_3_0_0/design_1_calcul_param_3_0_0_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_calcul_param_3_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_calcul_param_3_0_0/design_1_calcul_param_3_0_0_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_calcul_param_3_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_calcul_param_3_0_0/design_1_calcul_param_3_0_0_sim_netlist.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_0/design_1_mux4_0_0.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_0/design_1_mux4_0_0_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_0/design_1_mux4_0_0_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_0/design_1_mux4_0_0_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_0/design_1_mux4_0_0_sim_netlist.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_1' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_1/design_1_mux4_0_1.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_1' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_1/design_1_mux4_0_1_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_1' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_1/design_1_mux4_0_1_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_1' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_1/design_1_mux4_0_1_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_1' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_1/design_1_mux4_0_1_sim_netlist.vhdl'. Please regenerate to continue.
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-WARNING: [IP_Flow 19-3664] IP 'design_1_sig_fct_sat_dure_0_1' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_sig_fct_sat_dure_0_1/design_1_sig_fct_sat_dure_0_1.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_sig_fct_sat_dure_0_1' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_sig_fct_sat_dure_0_1/design_1_sig_fct_sat_dure_0_1_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_sig_fct_sat_dure_0_1' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_sig_fct_sat_dure_0_1/design_1_sig_fct_sat_dure_0_1_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_sig_fct_sat_dure_0_1' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_sig_fct_sat_dure_0_1/design_1_sig_fct_sat_dure_0_1_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_sig_fct_sat_dure_0_1' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_sig_fct_sat_dure_0_1/design_1_sig_fct_sat_dure_0_1_sim_netlist.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_module_commande_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_module_commande_0_0/design_1_module_commande_0_0.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_module_commande_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_module_commande_0_0/design_1_module_commande_0_0_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_module_commande_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_module_commande_0_0/design_1_module_commande_0_0_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_module_commande_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_module_commande_0_0/design_1_module_commande_0_0_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_module_commande_0_0' generated file not found 'c:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_module_commande_0_0/design_1_module_commande_0_0_sim_netlist.vhdl'. Please regenerate to continue.
-ERROR: [BD 41-69] Error sourcing TCL scupdate_compile_order -fileset sources_1
-open_bd_design {C:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd}
-Reading block design file <C:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd>...
+WARNING: [IP_Flow 19-3664] IP 'design_1_compteur_nbits_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_compteur_nbits_0_0/design_1_compteur_nbits_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_compteur_nbits_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_compteur_nbits_0_0/design_1_compteur_nbits_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_compteur_nbits_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_compteur_nbits_0_0/design_1_compteur_nbits_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_compteur_nbits_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_compteur_nbits_0_0/design_1_compteur_nbits_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_compteur_nbits_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_compteur_nbits_0_0/design_1_compteur_nbits_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mef_decod_i2s_v1b_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_decod_i2s_v1b_0_0/design_1_mef_decod_i2s_v1b_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mef_decod_i2s_v1b_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_decod_i2s_v1b_0_0/design_1_mef_decod_i2s_v1b_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mef_decod_i2s_v1b_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_decod_i2s_v1b_0_0/design_1_mef_decod_i2s_v1b_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mef_decod_i2s_v1b_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_decod_i2s_v1b_0_0/design_1_mef_decod_i2s_v1b_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mef_decod_i2s_v1b_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_decod_i2s_v1b_0_0/design_1_mef_decod_i2s_v1b_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_0/design_1_reg_24b_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_0/design_1_reg_24b_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_0/design_1_reg_24b_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_0/design_1_reg_24b_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_0/design_1_reg_24b_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_1' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_1/design_1_reg_24b_0_1.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_1' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_1/design_1_reg_24b_0_1_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_1' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_1/design_1_reg_24b_0_1_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_1' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_1/design_1_reg_24b_0_1_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_reg_24b_0_1' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_24b_0_1/design_1_reg_24b_0_1_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mef_cod_i2s_vsb_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_cod_i2s_vsb_0_0/design_1_mef_cod_i2s_vsb_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mef_cod_i2s_vsb_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_cod_i2s_vsb_0_0/design_1_mef_cod_i2s_vsb_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mef_cod_i2s_vsb_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_cod_i2s_vsb_0_0/design_1_mef_cod_i2s_vsb_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mef_cod_i2s_vsb_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_cod_i2s_vsb_0_0/design_1_mef_cod_i2s_vsb_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mef_cod_i2s_vsb_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mef_cod_i2s_vsb_0_0/design_1_mef_cod_i2s_vsb_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_reg_dec_24b_fd_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_dec_24b_fd_0_0/design_1_reg_dec_24b_fd_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_reg_dec_24b_fd_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_dec_24b_fd_0_0/design_1_reg_dec_24b_fd_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_reg_dec_24b_fd_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_dec_24b_fd_0_0/design_1_reg_dec_24b_fd_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_reg_dec_24b_fd_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_dec_24b_fd_0_0/design_1_reg_dec_24b_fd_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_reg_dec_24b_fd_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_reg_dec_24b_fd_0_0/design_1_reg_dec_24b_fd_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_util_vector_logic_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_util_vector_logic_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_util_vector_logic_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_util_vector_logic_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_util_vector_logic_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_affhexPmodSSD_v3_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_affhexPmodSSD_v3_0_0/design_1_affhexPmodSSD_v3_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_affhexPmodSSD_v3_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_affhexPmodSSD_v3_0_0/design_1_affhexPmodSSD_v3_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_affhexPmodSSD_v3_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_affhexPmodSSD_v3_0_0/design_1_affhexPmodSSD_v3_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_affhexPmodSSD_v3_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_affhexPmodSSD_v3_0_0/design_1_affhexPmodSSD_v3_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_affhexPmodSSD_v3_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_affhexPmodSSD_v3_0_0/design_1_affhexPmodSSD_v3_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_calcul_param_3_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_calcul_param_3_0_0/design_1_calcul_param_3_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_calcul_param_3_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_calcul_param_3_0_0/design_1_calcul_param_3_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_calcul_param_3_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_calcul_param_3_0_0/design_1_calcul_param_3_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_calcul_param_3_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_calcul_param_3_0_0/design_1_calcul_param_3_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_calcul_param_3_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_calcul_param_3_0_0/design_1_calcul_param_3_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_0/design_1_mux4_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_0/design_1_mux4_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_0/design_1_mux4_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_0/design_1_mux4_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_0/design_1_mux4_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_1' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_1/design_1_mux4_0_1.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_1' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_1/design_1_mux4_0_1_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_1' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_1/design_1_mux4_0_1_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_1' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_1/design_1_mux4_0_1_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mux4_0_1' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_mux4_0_1/design_1_mux4_0_1_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_sig_fct_sat_dure_0_1' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_sig_fct_sat_dure_0_1/design_1_sig_fct_sat_dure_0_1.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_sig_fct_sat_dure_0_1' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_sig_fct_sat_dure_0_1/design_1_sig_fct_sat_dure_0_1_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_sig_fct_sat_dure_0_1' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_sig_fct_sat_dure_0_1/design_1_sig_fct_sat_dure_0_1_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_sig_fct_sat_dure_0_1' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_sig_fct_sat_dure_0_1/design_1_sig_fct_sat_dure_0_1_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_sig_fct_sat_dure_0_1' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_sig_fct_sat_dure_0_1/design_1_sig_fct_sat_dure_0_1_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_module_commande_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_module_commande_0_0/design_1_module_commande_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_module_commande_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_module_commande_0_0/design_1_module_commande_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_module_commande_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_module_commande_0_0/design_1_module_commande_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_module_commande_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_module_commande_0_0/design_1_module_commande_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_module_commande_0_0' generated file not found 'k:/S4_APP2/pb_logique_seq.gen/sources_1/bd/design_1/ip/design_1_module_commande_0_0/design_1_module_commande_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1076.344 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_bd_design {K:/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file <K:/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd>...
 Adding component instance block -- xilinx.com:module_ref:compteur_nbits:1.0 - compteur_7bits
 Adding component instance block -- xilinx.com:module_ref:mef_decod_i2s_v1b:1.0 - MEF_decodeur_i2s
 Adding component instance block -- xilinx.com:module_ref:reg_24b:1.0 - registre_24bits_droite
@@ -116,7 +112,43 @@ Adding component instance block -- xilinx.com:module_ref:sig_fct_sat_dure:1.0 - 
 Adding component instance block -- xilinx.com:module_ref:sig_fct_sat_dure:1.0 - M3_fonction_distorsion_dure2
 Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - parametre_0
 Adding component instance block -- xilinx.com:module_ref:module_commande:1.0 - M8_commande
-Successfully read diagram <design_1> from block design file <C:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd>
-open_bd_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1293.746 ; gain = 125.992
-exit
-INFO: [Common 17-206] Exiting Vivado at Wed Jan 24 12:33:32 2024...
+Successfully read diagram <design_1> from block design file <K:/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1076.344 ; gain = 0.000
+source K:/S4_APP2/schema.tcl
+# highlight_objects [get_bd_cells M5_parametre_1] -color red
+# highlight_objects [get_bd_cells M6_parametre_2] -color red
+# highlight_objects [get_bd_cells M8_commande] -color red
+# highlight_objects [get_bd_cells M1_decodeur_i2s/MEF_decodeur_i2s] -color red
+# set curDir [get_property DIRECTORY [current_project]]
+# set_property location {1 178 353} [get_bd_cells M1_decodeur_i2s]
+# set_property location {2 448 219} [get_bd_cells M2_fonction_distortion_dure1]
+# set_property location {2 434 305} [get_bd_cells M3_fonction_distorsion_dure2]
+# set_property location {2 410 384} [get_bd_cells M4_fonction3]
+# set_property location {2.5 737 268} [get_bd_cells Multiplexeur_choix_fonction]
+# set_property location {1 139 570} [get_bd_cells M9_codeur_i2s]
+# set_property location {2 429 734} [get_bd_cells M8_commande]
+# set_property location {3.5 1059 166} [get_bd_cells M5_parametre_1]
+# set_property location {4 1057 59} [get_bd_cells parametre_0]
+# set_property location {4 1026 341} [get_bd_cells M6_parametre_2]
+# set_property location {4 1070 477} [get_bd_cells M7_parametre_3]
+# set_property location {4.5 1369 284} [get_bd_cells Multiplexeur_choix_parametre]
+# set_property location {5.5 1637 268} [get_bd_cells M10_conversion_affichage]
+# set_property location {-72 570} [get_bd_ports o_pbdat]
+# set_property location {-134 728} [get_bd_ports i_btn]
+# set_property location {-116 750} [get_bd_ports i_sw]
+# set_property location {-89 380} [get_bd_ports clk_100MHz]
+# set_property location {-95 357} [get_bd_ports i_lrc]
+# set_property location {-96 341} [get_bd_ports i_recdat]
+# set_property location {2130 272} [get_bd_ports JPmod]
+# set_property location {2130 120} [get_bd_ports o_param]
+# set_property location {2130 700} [get_bd_ports o_sel_fct]
+# set_property location {2130 725} [get_bd_ports o_sel_par]
+# set_property USER_COMMENTS.comment_1 {Modules à modifier:
+# MEF_decodeur_i2s (dans M1_decodeur_i2s)
+# M5_parametre_1
+# M6_parametre_2
+# M8_commande
+# Pour plus de clarté, vous pouvez cacher les fils pour les horloges
+# et les resets dans les paramètres (engrenage en haut a droite de cette fenêtre).
+# } [current_bd_design]
+open_bd_design {K:/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd}
