@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jan 24 12:21:02 2024
+# Process ID: 14496
+# Current directory: C:/Users/PC/Documents/GitHub/S4_APP2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15064 C:\Users\PC\Documents\GitHub\S4_APP2\pb_logique_seq.xpr
+# Log file: C:/Users/PC/Documents/GitHub/S4_APP2/vivado.log
+# Journal file: C:/Users/PC/Documents/GitHub/S4_APP2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.xpupdate_compile_order -fileset sources_1
