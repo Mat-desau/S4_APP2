@@ -49,8 +49,6 @@ entity mef_decod_i2s_v1b is
 );
 end mef_decod_i2s_v1b;
 
-
-
 architecture Behavioral of mef_decod_i2s_v1b is
    
 type fonction_etat is (
@@ -62,8 +60,8 @@ type fonction_etat is (
      confirmer
      );
      
-    signal etat_present, etat_suivant : fonction_etat; 
-         
+    signal etat_present, etat_suivant : fonction_etat;    
+      
 begin
 
    -- Assignation du prochain état
@@ -80,7 +78,49 @@ end process;
 
 process(etat_suivant, i_lrc, i_cpt_bits)
 begin
-    
+    case etat_present is
+        when initiale =>
+            if (i_lrc = '0') then
+                etat_suivant <= attente_gauche;
+            --elsif (i_lrc = '1') then
+                --etat_suivant <= attente_droite;
+            else
+                etat_suivant <= initiale;
+            end if;
+            
+        when attente_gauche =>
+            o_cpt_bit_reset <= '0';
+            o_load_left <= '1';
+            o_load_right <= '0';
+            -- ajouter compteur qui monte
+            if (i_cpt_bits = 23) then
+                o_load_left <= '0';
+                o_load_right <= '0';
+                o_cpt_bit_reset <= '1';
+                etat_suivant <= attente_droite;
+            else 
+                etat_suivant <= attente_gauche;
+            end if;
+            
+        when attente_droite =>
+            if (i_lrc = '1') then
+                o_cpt_bit_reset <= '0';
+                o_load_left <= '0';
+                o_load_right <= '1';
+                -- ajouetr compteur qui monte
+                if (i_cpt_bits = 23) then
+                    o_load_left <= '0';
+                    o_load_right <= '0';
+                    o_cpt_bit_reset <= '1';
+                    etat_suivant <= confirmer;
+                else 
+                    etat_suivant <= attente_gauche;
+                end if;
+            end if;
+            
+                
+        when others => etat_suivant <= etat_present;
+    end case;
 end process;
  
 
