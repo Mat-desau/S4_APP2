@@ -102,6 +102,7 @@ begin
                 etat_suivant <= attente_gauche;
             end if;
             
+            
         when attente_droite =>
             if (i_lrc = '1') then
                 o_cpt_bit_reset <= '0';
