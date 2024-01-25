@@ -44,3 +44,20 @@ relaunch_sim
 run 600 us
 relaunch_sim
 run 600 us
+close_sim
+create_bd_cell -type module -reference compteur_nbits compteur_nbits_0
+update_module_reference design_1_mef_decod_i2s_v1b_0_0
+update_module_reference {design_1_compteur_nbits_0_0 design_1_compteur_nbits_0_1}
+update_module_reference design_1_calcul_param_1_0_0
+update_module_reference design_1_compteur_nbits_0_2
+connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins compteur_nbits_0/clk]
+connect_bd_net [get_bd_pins M5_parametre_1/o_bit_enable] [get_bd_pins compteur_nbits_0/i_en]
+connect_bd_net [get_bd_pins M5_parametre_1/o_cpt_bit_reset] [get_bd_pins compteur_nbits_0/reset]
+connect_bd_net [get_bd_pins compteur_nbits_0/o_val_cpt] [get_bd_pins M5_parametre_1/i_cpt_bits]
+set_property location {4 2006 219} [get_bd_cells compteur_nbits_0]
+undo
+set_property location {4 2021 30} [get_bd_cells compteur_nbits_0]
+set_property location {4 2021 68} [get_bd_cells compteur_nbits_0]
+set_property location {4 2021 57} [get_bd_cells compteur_nbits_0]
+update_module_reference design_1_calcul_param_1_0_0
+archive_project D:/GitHub/pb_logique_seq.xpr.zip -temp_dir D:/GitHub/S4_APP2/.Xil/Vivado-7116-DESKTOP-9AUGKDP -force -include_local_ip_cache
