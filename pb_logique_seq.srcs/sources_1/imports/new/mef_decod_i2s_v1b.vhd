@@ -36,7 +36,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;  -- pour les additions dans les compteurs
 entity mef_decod_i2s_v1b is
    Port ( 
    i_bclk      : in std_logic;
-   i_reset     : in    std_logic; 
+   i_reset     : in std_logic; 
    i_lrc       : in std_logic;
    i_cpt_bits  : in std_logic_vector(6 downto 0);
  --  
@@ -53,14 +53,15 @@ architecture Behavioral of mef_decod_i2s_v1b is
    
 type fonction_etat is (
      initiale,
-     attente_gauche,
-     reset_gauche,
-     attente_droite,
-     reset_droite,
-     confirmer
+     compt_gauche,
+     save_gauche,
+     att_droite,
+     compt_droite,
+     save_droite,
+     send
      );
      
-    signal etat_present, etat_suivant : fonction_etat;    
+    signal etat_present, etat_suivant: fonction_etat;    
       
 begin
 
@@ -76,53 +77,105 @@ process(i_bclk, i_reset)
        end if;
 end process;
 
-process(etat_suivant, i_lrc, i_cpt_bits)
+process(etat_present, i_lrc, i_cpt_bits)
 begin
     case etat_present is
         when initiale =>
             if (i_lrc = '0') then
-                etat_suivant <= attente_gauche;
-            --elsif (i_lrc = '1') then
-                --etat_suivant <= attente_droite;
+                etat_suivant <= compt_gauche;
             else
                 etat_suivant <= initiale;
             end if;
             
-        when attente_gauche =>
-            o_cpt_bit_reset <= '0';
-            o_load_left <= '1';
-            o_load_right <= '0';
-            -- ajouter compteur qui monte
+        when compt_gauche =>
             if (i_cpt_bits = 23) then
-                o_load_left <= '0';
-                o_load_right <= '0';
-                o_cpt_bit_reset <= '1';
-                etat_suivant <= attente_droite;
-            else 
-                etat_suivant <= attente_gauche;
+                etat_suivant <= save_gauche;
+            else
+                etat_suivant <= compt_gauche;
             end if;
+        
+        when save_gauche =>
+            etat_suivant <= att_droite;
             
             
-        when attente_droite =>
+        when att_droite =>
             if (i_lrc = '1') then
-                o_cpt_bit_reset <= '0';
-                o_load_left <= '0';
-                o_load_right <= '1';
-                -- ajouetr compteur qui monte
-                if (i_cpt_bits = 23) then
-                    o_load_left <= '0';
-                    o_load_right <= '0';
-                    o_cpt_bit_reset <= '1';
-                    etat_suivant <= confirmer;
-                else 
-                    etat_suivant <= attente_gauche;
-                end if;
+                etat_suivant <= compt_droite;
+            else
+                etat_suivant <= att_droite;
             end if;
+
+        when compt_droite =>
+            if (i_cpt_bits = 23) then
+                etat_suivant <= save_droite;
+            else 
+                etat_suivant <= compt_droite;
+            end if;
+         
+        when save_droite =>
+            etat_suivant <= send;
             
-                
-        when others => etat_suivant <= etat_present;
+        when send =>
+            etat_suivant <= initiale;            
+            
+    end case;
+    
+end process;
+
+
+process(etat_present)
+begin
+    case etat_present is
+        when initiale =>
+            o_cpt_bit_reset     <= '1';
+            o_load_left         <= '0';
+            o_load_right        <= '0';
+            o_bit_enable        <= '0';
+            o_str_dat           <= '0'; 
+            
+        when compt_gauche =>
+            o_cpt_bit_reset     <= '0';
+            o_load_left         <= '0';
+            o_load_right        <= '0';
+            o_bit_enable        <= '1';
+            o_str_dat           <= '0'; 
+ 
+        when save_gauche =>
+            o_cpt_bit_reset     <= '0';
+            o_load_left         <= '1';
+            o_load_right        <= '0';
+            o_bit_enable        <= '0';
+            o_str_dat           <= '0'; 
+            
+        when att_droite =>
+            o_cpt_bit_reset     <= '1';
+            o_load_left         <= '0';
+            o_load_right        <= '0';
+            o_bit_enable        <= '0';
+            o_str_dat           <= '0'; 
+
+        when compt_droite =>
+            o_cpt_bit_reset     <= '0';
+            o_load_left         <= '0';
+            o_load_right        <= '0';
+            o_bit_enable        <= '1';
+            o_str_dat           <= '0';
+
+        when save_droite =>
+            o_cpt_bit_reset     <= '0';
+            o_load_left         <= '0';
+            o_load_right        <= '1';
+            o_bit_enable        <= '0';
+            o_str_dat           <= '0';
+         
+        when send =>
+            o_cpt_bit_reset     <= '0';
+            o_load_left         <= '0';
+            o_load_right        <= '0';
+            o_bit_enable        <= '0';
+            o_str_dat           <= '1';
+        
     end case;
 end process;
- 
 
 end Behavioral;

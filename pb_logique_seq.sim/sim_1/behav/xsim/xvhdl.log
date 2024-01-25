@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/imports/new/compteur_nbits.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'compteur_nbits'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/imports/new/mef_decod_i2s_v1b.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mef_decod_i2s_v1b'

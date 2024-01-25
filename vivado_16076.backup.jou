@@ -1,0 +1,95 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jan 24 16:31:15 2024
+# Process ID: 16076
+# Current directory: D:/GitHub/S4_APP2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10004 D:\GitHub\S4_APP2\pb_logique_seq.xpr
+# Log file: D:/GitHub/S4_APP2/vivado.log
+# Journal file: D:/GitHub/S4_APP2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/GitHub/S4_APP2/pb_logique_seq.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top module_commande_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_module_reference design_1_compteur_nbits_0_0
+update_module_reference design_1_mef_decod_i2s_v1b_0_0
+update_module_reference {design_1_reg_24b_0_0 design_1_reg_24b_0_1}
+update_module_reference design_1_reg_dec_24b_0_0
+update_module_reference design_1_compteur_nbits_0_1
+update_module_reference design_1_mef_cod_i2s_vsb_0_0
+update_module_reference design_1_mux2_0_0
+update_module_reference design_1_reg_dec_24b_fd_0_0
+update_module_reference design_1_calcul_param_1_0_0
+update_module_reference design_1_calcul_param_2_0_0
+update_module_reference design_1_calcul_param_3_0_0
+update_module_reference {design_1_mux4_0_0 design_1_mux4_0_1}
+update_module_reference design_1_sig_fct_3_0_0
+update_module_reference {design_1_sig_fct_sat_dure_0_0 design_1_sig_fct_sat_dure_0_1}
+update_module_reference design_1_module_commande_0_0
+update_compile_order -fileset sim_1
+launch_simulation
+source module_commande_tb.tcl
+run 600 us
+open_bd_design {D:/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd}
+source D:/GitHub/S4_APP2/schema.tcl
+close_sim
+save_bd_design
+launch_simulation
+source module_commande_tb.tcl
+run 600 us
+close_sim
+launch_simulation
+source module_commande_tb.tcl
+run 600 us
+relaunch_sim
+run 600 us
+relaunch_sim
+run 600 us
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top mef_decod_i2s_v1b [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top_arch Behavioral [get_filesets sim_1]
+set_property top_file D:/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/imports/new/mef_decod_i2s_v1b.vhd [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top simul_module_sig_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+close_bd_design [get_bd_designs design_1]
+update_compile_order -fileset sim_1
+generate_target Simulation [get_files D:/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/GitHub/S4_APP2/pb_logique_seq.ip_user_files/sim_scripts -ip_user_files_dir D:/GitHub/S4_APP2/pb_logique_seq.ip_user_files -ipstatic_source_dir D:/GitHub/S4_APP2/pb_logique_seq.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/GitHub/S4_APP2/pb_logique_seq.cache/compile_simlib/modelsim} {questa=D:/GitHub/S4_APP2/pb_logique_seq.cache/compile_simlib/questa} {riviera=D:/GitHub/S4_APP2/pb_logique_seq.cache/compile_simlib/riviera} {activehdl=D:/GitHub/S4_APP2/pb_logique_seq.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+generate_target Simulation [get_files D:/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/GitHub/S4_APP2/pb_logique_seq.ip_user_files/sim_scripts -ip_user_files_dir D:/GitHub/S4_APP2/pb_logique_seq.ip_user_files -ipstatic_source_dir D:/GitHub/S4_APP2/pb_logique_seq.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/GitHub/S4_APP2/pb_logique_seq.cache/compile_simlib/modelsim} {questa=D:/GitHub/S4_APP2/pb_logique_seq.cache/compile_simlib/questa} {riviera=D:/GitHub/S4_APP2/pb_logique_seq.cache/compile_simlib/riviera} {activehdl=D:/GitHub/S4_APP2/pb_logique_seq.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+generate_target Simulation [get_files D:/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/GitHub/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/GitHub/S4_APP2/pb_logique_seq.ip_user_files/sim_scripts -ip_user_files_dir D:/GitHub/S4_APP2/pb_logique_seq.ip_user_files -ipstatic_source_dir D:/GitHub/S4_APP2/pb_logique_seq.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/GitHub/S4_APP2/pb_logique_seq.cache/compile_simlib/modelsim} {questa=D:/GitHub/S4_APP2/pb_logique_seq.cache/compile_simlib/questa} {riviera=D:/GitHub/S4_APP2/pb_logique_seq.cache/compile_simlib/riviera} {activehdl=D:/GitHub/S4_APP2/pb_logique_seq.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
