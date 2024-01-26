@@ -39,10 +39,7 @@ entity calcul_param_1 is
     i_reset          : in std_logic;
     i_en             : in std_logic; -- un echantillon present a l'entrée
     i_ech            : in std_logic_vector (23 downto 0); -- echantillon en entrée
-    i_cpt_bits       : in std_logic_vector(7 downto 0);
     
-    o_bit_enable     : out std_logic ; 
-    o_cpt_bit_reset  : out std_logic ;
     o_param          : out std_logic_vector (7 downto 0)   -- paramètre calculé
     );
 end calcul_param_1;
@@ -63,7 +60,9 @@ type fonction_etat is (
      );
      
     signal etat_present, etat_suivant: fonction_etat; 
-    signal periode : std_logic_vector(7 downto 0);   
+    signal nb_periode : unsigned(8 downto 0);   
+    signal param_mem : std_logic_vector (8 downto 0);
+    signal compte    : std_logic_vector (7 downto 0);
 
 ---------------------------------------------------------------------------------
 -- Signaux
@@ -86,7 +85,7 @@ process(i_bclk, i_reset)
        end if;
 end process;
 
-process(etat_present, i_ech, i_cpt_bits)
+process(etat_present, i_ech, compte)
 begin
     case etat_present is
         when initiale =>  
@@ -95,6 +94,7 @@ begin
         when detect_plus =>
             if (i_ech(23) = '0') then
                 etat_suivant <= plus1;
+                compte <= "00000000";
             else
                 etat_suivant <= detect_plus;
             end if;  
@@ -118,12 +118,15 @@ begin
                 etat_suivant <= fois2;
             else 
                 etat_suivant <= compt_plus;
+                compte <= compte + 1 ;
             end if; 
  
          when fois2 =>
+            nb_periode <= (unsigned(compte) + 4) * 2;
             etat_suivant <= save;
           
          when save =>
+            param_mem <= std_logic_vector(nb_periode);
             etat_suivant <= detect_plus;
             
          when others =>
@@ -139,43 +142,30 @@ begin
     case etat_present is
     
         when initiale =>
-            o_bit_enable     <= '0';
-            o_cpt_bit_reset  <= '1';
-            o_param          <= "00000000"; 
+            param_mem      <= "000000000";
+            o_param          <= param_mem(7 downto 0);
             
         when detect_plus =>
-            o_bit_enable     <= '0';
-            o_cpt_bit_reset  <= '0';
-            o_param          <= "00000000"; 
+            o_param          <= param_mem(7 downto 0); 
             
         when plus1 =>
-            o_bit_enable     <= '0';
-            o_cpt_bit_reset  <= '0';
-            o_param          <= "00000000";  
+            o_param          <= param_mem(7 downto 0);  
             
         when plus2 =>
-            o_bit_enable     <= '0';
-            o_cpt_bit_reset  <= '0';
-            o_param          <= "00000000"; 
+            o_param          <= param_mem(7 downto 0); 
             
         when compt_plus =>
-            o_bit_enable     <= '1';
-            o_cpt_bit_reset  <= '0';
-            o_param          <= "00000000"; 
+            o_param          <= param_mem(7 downto 0); 
             
         when fois2 =>
-            o_bit_enable     <= '0';
-            o_cpt_bit_reset  <= '0';
-            o_param          <= "00000000"; 
+            o_param          <= param_mem(7 downto 0); 
             
         when save =>
-            o_bit_enable     <= '0';
-            o_cpt_bit_reset  <= '0';
-            o_param          <= "00000000";             
+            o_param          <= param_mem(7 downto 0);             
                                                               
-               
     end case;
 end process;
+
     -- o_param <= x"01";    -- temporaire ...
  
 end Behavioral;

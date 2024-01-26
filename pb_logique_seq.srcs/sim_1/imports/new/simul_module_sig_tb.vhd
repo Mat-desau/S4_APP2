@@ -35,7 +35,7 @@ file leftInputFile : text;
 file rightInputFile : text;
 --Chemin depuis le fichier de simulation les fichiers se trouvent à la racine du projet
 constant leftInputFileName : string := "../../../../leftInput.txt"; 
-constant rightInputFileName : string := "../../../../rightInput.txt";
+constant rightInputFileName : string := "../../../../SignalHexa_1000Hz.txt";
 
 shared variable fstatusLeft : file_open_status := NAME_ERROR;
 shared variable fstatusRight : file_open_status := NAME_ERROR;
@@ -79,6 +79,19 @@ end component;
     o_sel_par : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   end component design_1;
+  
+  component calcul_param_1 is
+    Port (
+    i_bclk           : in std_logic; -- bit clock (I2S)
+    i_reset          : in std_logic;
+    i_en             : in std_logic; -- un echantillon present a l'entrée
+    i_ech            : in std_logic_vector (23 downto 0); -- echantillon en entrée
+
+    o_param          : out std_logic_vector (7 downto 0)   -- paramètre calculé
+    );
+  end component;
+  
+
   
 impure function nextLeftInput return std_logic_vector is 
 variable iline : line;
@@ -140,6 +153,11 @@ end nextRightInput;
     signal d_param      : std_logic_vector(7 downto 0):= (others =>'0');
     signal d_led        : std_logic_vector(3 downto 0):= (others =>'0');
     
+    signal d_ac_en      : std_logic;
+    signal d_o_bit_enable : std_logic;
+    signal d_o_bit_reset : std_logic;
+    signal d_cpt_bits : std_logic_vector (7 downto 0);
+    
 -- notes
     -- frequences      ***********************
     -- d_ac_reclrc  ~ 48.    KHz    (~ 20.8    us)
@@ -155,8 +173,20 @@ end nextRightInput;
 begin
    ----------------------------------------------------------------------------
    -- unites objets du test
-   ----------------------------------------------------------------------------
-     
+   ----------------------------------------------------------------------------  
+
+
+ UUT_calc_param_1 : calcul_param_1
+ Port map
+    (
+    i_bclk           => d_ac_bclk,
+    i_reset          => s_reset,
+    i_en             => d_ac_en,
+    i_ech            => d_ech_reg_right,
+    
+    o_param          => open
+    );
+    
  UUT_codeur: M9_codeur_i2s_imp_1VJCTGL
  Port map
     (
@@ -193,7 +223,7 @@ begin
           i_data       =>  d_sig_pbdat,
           o_dat_left  =>  d_ech_reg_left,
           o_dat_right =>  d_ech_reg_right,
-          o_str_dat   =>  open
+          o_str_dat   =>  d_ac_en
       );
     
   

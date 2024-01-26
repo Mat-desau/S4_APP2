@@ -7,7 +7,8 @@
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.2"
+      "tool_version": "2020.2",
+      "validated": "true"
     },
     "design_tree": {
       "M1_decodeur_i2s": {
@@ -39,7 +40,6 @@
       "M2_fonction_distortion_dure1": "",
       "M3_fonction_distorsion_dure2": "",
       "M8_commande": "",
-      "compteur_nbits_0": "",
       "M5_parametre_1": ""
     },
     "ports": {
@@ -63,8 +63,24 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_100MHz",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
           }
         }
       },
@@ -311,7 +327,21 @@
             },
             "ports": {
               "i_bclk": {
-                "direction": "I"
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.000",
+                    "value_src": "default_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "design_1_clk_100MHz",
+                    "value_src": "default_prop"
+                  }
+                }
               },
               "i_reset": {
                 "type": "rst",
@@ -366,6 +396,14 @@
                   "ASSOCIATED_RESET": {
                     "value": "reset",
                     "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "design_1_clk_100MHz",
+                    "value_src": "default_prop"
                   }
                 }
               },
@@ -762,6 +800,14 @@
                   "ASSOCIATED_RESET": {
                     "value": "reset",
                     "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "design_1_clk_100MHz",
+                    "value_src": "default_prop"
                   }
                 }
               },
@@ -1264,41 +1310,6 @@
           }
         }
       },
-      "compteur_nbits_0": {
-        "vlnv": "xilinx.com:module_ref:compteur_nbits:1.0",
-        "xci_name": "design_1_compteur_nbits_0_2",
-        "xci_path": "ip\\design_1_compteur_nbits_0_2\\design_1_compteur_nbits_0_2.xci",
-        "inst_hier_path": "compteur_nbits_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "compteur_nbits",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "reset",
-                "value_src": "constant"
-              }
-            }
-          },
-          "i_en": {
-            "direction": "I"
-          },
-          "reset": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "o_val_cpt": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          }
-        }
-      },
       "M5_parametre_1": {
         "vlnv": "xilinx.com:module_ref:calcul_param_1:1.0",
         "xci_name": "design_1_calcul_param_1_0_0",
@@ -1311,7 +1322,21 @@
         },
         "ports": {
           "i_bclk": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_100MHz",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_reset": {
             "type": "rst",
@@ -1324,18 +1349,6 @@
             "direction": "I",
             "left": "23",
             "right": "0"
-          },
-          "i_cpt_bits": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "o_bit_enable": {
-            "direction": "O"
-          },
-          "o_cpt_bit_reset": {
-            "type": "rst",
-            "direction": "O"
           },
           "o_param": {
             "direction": "O",
@@ -1412,7 +1425,6 @@
           "M6_parametre_2/i_bclk",
           "M7_parametre_3/i_bclk",
           "M8_commande/clk",
-          "compteur_nbits_0/clk",
           "M5_parametre_1/i_bclk"
         ]
       },
@@ -1506,24 +1518,6 @@
         "ports": [
           "M8_commande/o_btn_cd",
           "M10_conversion_affichage/i_btn"
-        ]
-      },
-      "M5_parametre_1_o_bit_enable": {
-        "ports": [
-          "M5_parametre_1/o_bit_enable",
-          "compteur_nbits_0/i_en"
-        ]
-      },
-      "M5_parametre_1_o_cpt_bit_reset": {
-        "ports": [
-          "M5_parametre_1/o_cpt_bit_reset",
-          "compteur_nbits_0/reset"
-        ]
-      },
-      "compteur_nbits_0_o_val_cpt": {
-        "ports": [
-          "compteur_nbits_0/o_val_cpt",
-          "M5_parametre_1/i_cpt_bits"
         ]
       }
     },

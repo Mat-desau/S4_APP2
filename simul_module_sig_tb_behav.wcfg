@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="simul_module_sig_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="simul_module_sig_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="555715891fs"></ZoomEndTime>
+      <Cursor1Time time="555715890fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/simul_module_sig_tb/UUT_calc_param_1/i_bclk" type="logic">
+      <obj_property name="ElementShortName">i_bclk</obj_property>
+      <obj_property name="ObjectShortName">i_bclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_module_sig_tb/UUT_calc_param_1/i_reset" type="logic">
+      <obj_property name="ElementShortName">i_reset</obj_property>
+      <obj_property name="ObjectShortName">i_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_module_sig_tb/UUT_calc_param_1/i_en" type="logic">
+      <obj_property name="ElementShortName">i_en</obj_property>
+      <obj_property name="ObjectShortName">i_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_module_sig_tb/UUT_calc_param_1/i_ech" type="array">
+      <obj_property name="ElementShortName">i_ech[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_ech[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_module_sig_tb/UUT_calc_param_1/o_param" type="array">
+      <obj_property name="ElementShortName">o_param[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_param[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_module_sig_tb/UUT_calc_param_1/etat_present" type="other">
+      <obj_property name="ElementShortName">etat_present</obj_property>
+      <obj_property name="ObjectShortName">etat_present</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_module_sig_tb/UUT_calc_param_1/etat_suivant" type="other">
+      <obj_property name="ElementShortName">etat_suivant</obj_property>
+      <obj_property name="ObjectShortName">etat_suivant</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_module_sig_tb/UUT_calc_param_1/nb_periode" type="array">
+      <obj_property name="ElementShortName">nb_periode[8:0]</obj_property>
+      <obj_property name="ObjectShortName">nb_periode[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_module_sig_tb/UUT_calc_param_1/param_mem" type="array">
+      <obj_property name="ElementShortName">param_mem[8:0]</obj_property>
+      <obj_property name="ObjectShortName">param_mem[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_module_sig_tb/UUT_calc_param_1/compte" type="array">
+      <obj_property name="ElementShortName">compte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">compte[7:0]</obj_property>
+   </wvobject>
+</wave_config>
