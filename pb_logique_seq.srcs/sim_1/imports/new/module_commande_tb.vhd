@@ -111,8 +111,6 @@ begin
 ----------------------------------------------------------------------------
 d_reset <= d_btn(3);
 
-
-
 tb : PROCESS
    BEGIN
       d_sw  <= "0000";
@@ -121,7 +119,7 @@ tb : PROCESS
       
      -- Tests avec les interrupteurs
      for i_sw in 0 to 15 loop
-          d_sw <= std_logic_vector(to_unsigned(i_sw,4));
+          d_sw <= std_logic_vector(to_unsigned(i_sw, 4));
            wait for c_delai_commandes;  -- attendre delai
       end loop;
       d_sw  <= "0000";
@@ -133,6 +131,7 @@ tb : PROCESS
           assert (d_sel_fct = expected_status_code)
             report "L'etat n'est pas S0 après la reinitialisation"
             severity WARNING;
+            
       for index_btn in 0 to 7 loop
           wait for c_delai_commandes;  -- attendre delai
           d_btn <= "0001";
@@ -144,6 +143,7 @@ tb : PROCESS
             report "L'etat n'est pas celui attendu"
             severity WARNING;
       end loop;
+      
       for index_btn in 0 to 7 loop
           wait for c_delai_commandes;  -- attendre delai
           d_btn <= "0010";
@@ -154,6 +154,7 @@ tb : PROCESS
             report "L'etat n'est pas celui attendu"
             severity WARNING;
       end loop;
+      
       for index_btn in 0 to 3 loop
           wait for c_delai_commandes;  -- attendre delai
           d_btn <= "0011";

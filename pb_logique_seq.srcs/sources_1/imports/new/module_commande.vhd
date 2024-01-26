@@ -38,7 +38,7 @@ end component;
     signal d_strobe_btn :    std_logic_vector (nbtn-1 downto 0);
     signal d_btn_cd     :    std_logic_vector (nbtn-1 downto 0); 
     signal d_reset      :    std_logic;
-    signal etat_present, etat_suivant : std_logic_vector (1 downto 0) := "00";
+    signal etat_present, etat_suivant : std_logic_vector (1 downto 0);
    
 BEGIN 
 
@@ -52,9 +52,9 @@ BEGIN
         o_strobe_btn  => d_strobe_btn  
          );
  
- process(etat_suivant, etat_present, d_strobe_btn)
+ process(etat_present, d_strobe_btn)
  begin
-    if d_strobe_btn(1 downto 0) = "01" or d_strobe_btn(1 downto 0) = "10" then
+    if d_strobe_btn(1 downto 0) = "00" or d_strobe_btn(1 downto 0) = "01" or d_strobe_btn(1 downto 0) = "10" then
         case etat_present is
             when "00" => 
                 if d_strobe_btn(0) = '1' then
@@ -91,8 +91,8 @@ BEGIN
             when others => 
                 etat_suivant <= etat_present;
         end case;
-    else
-         etat_suivant <= etat_present;
+    --else
+        -- etat_suivant <= etat_present;
     end if;
  end process;
 

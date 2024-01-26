@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="module_commande_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="module_commande_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1001000000fs"></ZoomEndTime>
+      <Cursor1Time time="1001000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="404"></NameColumnWidth>
+      <ValueColumnWidth column_width="190"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/module_commande_tb/d_clk_p" type="logic">
+      <obj_property name="ElementShortName">d_clk_p</obj_property>
+      <obj_property name="ObjectShortName">d_clk_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/module_commande_tb/d_reset" type="logic">
+      <obj_property name="ElementShortName">d_reset</obj_property>
+      <obj_property name="ObjectShortName">d_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/module_commande_tb/d_sw" type="array">
+      <obj_property name="ElementShortName">d_sw[3:0]</obj_property>
+      <obj_property name="ObjectShortName">d_sw[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/module_commande_tb/d_btn" type="array">
+      <obj_property name="ElementShortName">d_btn[3:0]</obj_property>
+      <obj_property name="ObjectShortName">d_btn[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/module_commande_tb/d_btn_db" type="array">
+      <obj_property name="ElementShortName">d_btn_db[3:0]</obj_property>
+      <obj_property name="ObjectShortName">d_btn_db[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/module_commande_tb/d_sel_par" type="array">
+      <obj_property name="ElementShortName">d_sel_par[1:0]</obj_property>
+      <obj_property name="ObjectShortName">d_sel_par[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/module_commande_tb/d_sel_fct" type="array">
+      <obj_property name="ElementShortName">d_sel_fct[1:0]</obj_property>
+      <obj_property name="ObjectShortName">d_sel_fct[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/module_commande_tb/expected_status_code" type="array">
+      <obj_property name="ElementShortName">expected_status_code[1:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_status_code[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/module_commande_tb/c_clk_p_Period" type="other">
+      <obj_property name="ElementShortName">c_clk_p_Period</obj_property>
+      <obj_property name="ObjectShortName">c_clk_p_Period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/module_commande_tb/c_delai_commandes" type="other">
+      <obj_property name="ElementShortName">c_delai_commandes</obj_property>
+      <obj_property name="ObjectShortName">c_delai_commandes</obj_property>
+   </wvobject>
+</wave_config>
