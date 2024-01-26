@@ -1,0 +1,12 @@
+
+{ 
+    crc :  14247748183668703370  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto ae302d5aa3284400815652c101d33dae --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlconstant_v1_1_7 -L util_vector_logic_v2_0_1 -L xlconcat_v2_1_4 -L xlslice_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot circuit_tr_signal_behav xil_defaultlib.circuit_tr_signal xil_defaultlib.glbl" , 
+    buildDate : "Nov 18 2020" , 
+    buildTime : "09:47:47" , 
+    linkCmd : "C:\\Xilinx\\Vivado\\2020.2\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/circuit_tr_signal_behav/xsimk.exe\"   \"xsim.dir/circuit_tr_signal_behav/obj/xsim_0.win64.obj\" \"xsim.dir/circuit_tr_signal_behav/obj/xsim_1.win64.obj\" -L\"C:\\Xilinx\\Vivado\\2020.2\\lib\\win64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

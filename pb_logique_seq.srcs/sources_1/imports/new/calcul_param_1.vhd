@@ -61,12 +61,14 @@ type fonction_etat is (
      att_enable,
      compte1,
      fois2,
-     save
+     save, 
+     reset
      );
      
     signal etat_present, etat_suivant: fonction_etat; 
-    signal compte : std_logic_vector (7 downto 0);
-    signal param_mem : unsigned (7 downto 0);   
+    signal compte : unsigned (7 downto 0);
+    signal compte_2 : unsigned (7 downto 0);
+    signal param_mem : std_logic_vector (7 downto 0);   
 
 begin 
 
@@ -85,17 +87,17 @@ process(etat_present, i_en, i_ech, compte)
 begin
     case etat_present is
         when init =>       
-            etat_suivant <= att_enable;
             compte <= "00000000";
             param_mem <= "00000000";
-          
+            etat_suivant <= att_enable;
+            
         when att_enable =>
-            if i_en = '0' then
-                etat_suivant <= att_enable;
-            elsif i_en = '1' and i_ech(23) = '0' then
+            if i_en = '1' and i_ech(23) = '0' then
                 etat_suivant <= compte1;
             elsif i_en = '1' and i_ech(23) = '1' then
                 etat_suivant <= fois2;
+            else 
+                etat_suivant <= att_enable;
             end if;
                 
         when compte1 =>
@@ -107,42 +109,47 @@ begin
             end if;
            
         when fois2 =>
-            if (compte >= 2) then
-                param_mem <= unsigned(compte) * 2;
-                etat_suivant <= save;
+            if (compte < 2) then
+               etat_suivant <= reset;
             else
-                etat_suivant <= att_enable;
+                compte_2 <= compte + compte;
+                etat_suivant <= save;
             end if;
          
         when save =>
+            param_mem <= std_logic_vector(compte_2); 
+            etat_suivant <= reset;
+        
+        when reset =>       
+            compte <= "00000000";
             etat_suivant <= att_enable;
-               
+                 
     end case;
     
 end process;
 
-process(etat_present)
-begin
-    case etat_present is
-        when init =>       
+    o_param <= param_mem;
+--process(etat_present)
+--begin
+--    case etat_present is
+--        when init =>       
             
           
-        when att_enable =>
+--        when att_enable =>
           
             
-        when compte1 =>
+--        when compte1 =>
            
 
-        when fois2 =>
+--        when fois2 =>
             
          
-        when save =>
-            
-               
-            
-    end case;
+--        when save =>
+              
+--    end case;
     
-end process;
+--end process;
+
 
  
 end Behavioral;
