@@ -36,7 +36,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;  -- pour les additions dans les compteurs
 entity mef_decod_i2s_v1b is
    Port ( 
    i_bclk      : in std_logic;
-   i_reset     : in    std_logic; 
+   i_reset     : in std_logic; 
    i_lrc       : in std_logic;
    i_cpt_bits  : in std_logic_vector(6 downto 0);
  --  
@@ -50,62 +50,132 @@ entity mef_decod_i2s_v1b is
 end mef_decod_i2s_v1b;
 
 architecture Behavioral of mef_decod_i2s_v1b is
-
-    signal   d_reclrc_prec  : std_logic ;  --
-    
+   
+type fonction_etat is (
+     initiale,
+     compt_gauche,
+     save_gauche,
+     att_droite,
+     compt_droite,
+     save_droite,
+     send
+     );
+     
+    signal etat_present, etat_suivant: fonction_etat;    
+      
 begin
 
-   -- pour detecter transitions d_ac_reclrc
-   reglrc_I2S: process ( i_bclk)
-   begin
-   if i_bclk'event and (i_bclk = '1') then
-        d_reclrc_prec <= i_lrc;
-   end if;
-   end process;
-   
-  -- synch compteur codeur
-   rest_cpt: process (i_lrc, d_reclrc_prec, i_reset)
-      begin
-         o_cpt_bit_reset <= (d_reclrc_prec xor i_lrc) or i_reset;
-      end process;
-      
+   -- Assignation du prochain état
+process(i_bclk, i_reset)
+    begin
+       if (i_reset = '1') then
+             etat_present <= initiale;
+       else
+           if rising_edge(i_bclk) then
+                 etat_present <= etat_suivant;
+           end if;
+       end if;
+end process;
 
-     -- decodage compteur avec case ...   
-        sig_ctrl_I2S:  process (i_cpt_bits, i_lrc )
-            begin
-                case i_cpt_bits is
-                 when "0000000" =>
-                     o_bit_enable     <= '1';
-                     o_load_left      <= '0';
-                     o_load_right     <= '0';
-                     o_str_dat        <= '0';
-                 when   "0000001"  |  "0000010"  |  "0000011"  |  "0000100"  
-                       |  "0000101"  |  "0000110"  |  "0000111"  |  "0001000" 
-                       |  "0001001"  |  "0001010"  |  "0001011"  |  "0001100" 
-                       |  "0001101"  |  "0001110"  |  "0001111"  |  "0010000"  
-                       |  "0010001"  |  "0010010"  |  "0010011"  |  "0010100" 
-                       |  "0010101"  |  "0010110"  |  "0010111"   
-                    =>
-                     o_bit_enable     <= '1';
-                     o_load_left      <= '0';
-                     o_load_right     <= '0';
-                     o_str_dat        <= '0';
-                 when   "0011000"  =>
-                     o_bit_enable     <= '0';
-                     o_load_left      <= not i_lrc;
-                     o_load_right     <=  i_lrc;
-                     o_str_dat        <= '0';
-                 when    "0011001"  =>
-                    o_bit_enable     <= '0';
-                    o_load_left     <= '0';
-                    o_load_right     <= '0';
-                    o_str_dat        <=  i_lrc;
-                 when  others  =>
-                    o_bit_enable     <= '0';
-                    o_load_left      <= '0';
-                    o_load_right     <= '0';
-                    o_str_dat        <= '0';
-                 end case;
-             end process;
+process(etat_present, i_lrc, i_cpt_bits)
+begin
+    case etat_present is
+        when initiale =>
+            if (i_lrc = '0') then
+                etat_suivant <= compt_gauche;
+            else
+                etat_suivant <= initiale;
+            end if;
+            
+        when compt_gauche =>
+            if (i_cpt_bits = 23) then
+                etat_suivant <= save_gauche;
+            else
+                etat_suivant <= compt_gauche;
+            end if;
+        
+        when save_gauche =>
+            etat_suivant <= att_droite;
+            
+            
+        when att_droite =>
+            if (i_lrc = '1') then
+                etat_suivant <= compt_droite;
+            else
+                etat_suivant <= att_droite;
+            end if;
 
-     end Behavioral;
+        when compt_droite =>
+            if (i_cpt_bits = 23) then
+                etat_suivant <= save_droite;
+            else 
+                etat_suivant <= compt_droite;
+            end if;
+         
+        when save_droite =>
+            etat_suivant <= send;
+            
+        when send =>
+            etat_suivant <= initiale;            
+            
+    end case;
+    
+end process;
+
+
+process(etat_present)
+begin
+    case etat_present is
+        when initiale =>
+            o_cpt_bit_reset     <= '1';
+            o_load_left         <= '0';
+            o_load_right        <= '0';
+            o_bit_enable        <= '0';
+            o_str_dat           <= '0'; 
+            
+        when compt_gauche =>
+            o_cpt_bit_reset     <= '0';
+            o_load_left         <= '0';
+            o_load_right        <= '0';
+            o_bit_enable        <= '1';
+            o_str_dat           <= '0'; 
+ 
+        when save_gauche =>
+            o_cpt_bit_reset     <= '0';
+            o_load_left         <= '1';
+            o_load_right        <= '0';
+            o_bit_enable        <= '0';
+            o_str_dat           <= '0'; 
+            
+        when att_droite =>
+            o_cpt_bit_reset     <= '1';
+            o_load_left         <= '0';
+            o_load_right        <= '0';
+            o_bit_enable        <= '0';
+            o_str_dat           <= '0'; 
+
+        when compt_droite =>
+            o_cpt_bit_reset     <= '0';
+            o_load_left         <= '0';
+            o_load_right        <= '0';
+            o_bit_enable        <= '1';
+            o_str_dat           <= '0';
+
+        when save_droite =>
+            o_cpt_bit_reset     <= '0';
+            o_load_left         <= '0';
+            o_load_right        <= '1';
+            o_bit_enable        <= '0';
+            o_str_dat           <= '0';
+         
+        when send =>
+            o_cpt_bit_reset     <= '0';
+            o_load_left         <= '0';
+            o_load_right        <= '0';
+            o_bit_enable        <= '0';
+            o_str_dat           <= '1';
+        
+    end case;
+end process;
+
+end Behavioral;
