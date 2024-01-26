@@ -81,6 +81,7 @@ generic ( mode_simulation: std_logic := '0');
     );
 end circuit_tr_signal;
 
+
 architecture STRUCTURE of circuit_tr_signal is
 
   constant freq_sys_Hz:  integer := 125_000_000;  -- Hz

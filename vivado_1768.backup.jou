@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Jan 26 10:36:48 2024
+# Process ID: 1768
+# Current directory: C:/Users/PC/Documents/GitHub/S4_APP2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2044 C:\Users\PC\Documents\GitHub\S4_APP2\pb_logique_seq.xpr
+# Log file: C:/Users/PC/Documents/GitHub/S4_APP2/vivado.log
+# Journal file: C:/Users/PC/Documents/GitHub/S4_APP2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/PC/Documents/GitHub/S4_APP2/pb_logique_seq.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/PC/Documents/GitHub/S4_APP2/module_commande_tb_behav.wcfg
+source simul_module_sig_tb.tcl
+current_wave_config {module_commande_tb_behav.wcfg}
+add_wave {{/simul_module_sig_tb/UUT_mod_sig/M5_parametre_1/U0}} 
+current_wave_config {module_commande_tb_behav.wcfg}
+add_wave {{/simul_module_sig_tb/UUT_mod_sig/M5_parametre_1}} 
+relaunch_sim
+run 1 ms
+relaunch_sim
+run 1 ms
+current_wave_config {module_commande_tb_behav.wcfg}
+add_wave {{/simul_module_sig_tb/UUT_mod_sig/M5_parametre_1/U0}} 
+current_wave_config {module_commande_tb_behav.wcfg}
+add_wave {{/simul_module_sig_tb/UUT_mod_sig/M5_parametre_1}} 
+relaunch_sim
+run 1 ms
+close_sim
+launch_simulation
+open_wave_config C:/Users/PC/Documents/GitHub/S4_APP2/module_commande_tb_behav.wcfg
+source simul_module_sig_tb.tcl
+current_wave_config {module_commande_tb_behav.wcfg}
+add_wave {{/simul_module_sig_tb/UUT_mod_sig/M5_parametre_1/U0}} 
+current_wave_config {module_commande_tb_behav.wcfg}
+add_wave {{/simul_module_sig_tb/UUT_mod_sig/M5_parametre_1}} 
+relaunch_sim
+close_sim

@@ -39,8 +39,8 @@
       "M2_fonction_distortion_dure1": "",
       "M3_fonction_distorsion_dure2": "",
       "parametre_0": "",
-      "M5_parametre_1": "",
-      "M8_commande": ""
+      "M8_commande": "",
+      "M5_parametre_1": ""
     },
     "ports": {
       "i_recdat": {
@@ -1251,53 +1251,6 @@
           }
         }
       },
-      "M5_parametre_1": {
-        "vlnv": "xilinx.com:module_ref:calcul_param_1:1.0",
-        "xci_name": "design_1_calcul_param_1_0_0",
-        "xci_path": "ip\\design_1_calcul_param_1_0_0\\design_1_calcul_param_1_0_0.xci",
-        "inst_hier_path": "M5_parametre_1",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "calcul_param_1",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "i_bclk": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "PHASE": {
-                "value": "0.000",
-                "value_src": "default_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_clk_100MHz",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "i_reset": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "i_en": {
-            "direction": "I"
-          },
-          "i_ech": {
-            "direction": "I",
-            "left": "23",
-            "right": "0"
-          },
-          "o_param": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          }
-        }
-      },
       "M8_commande": {
         "vlnv": "xilinx.com:module_ref:module_commande:1.0",
         "xci_name": "design_1_module_commande_0_0",
@@ -1350,6 +1303,53 @@
           "o_selection_par": {
             "direction": "O",
             "left": "1",
+            "right": "0"
+          }
+        }
+      },
+      "M5_parametre_1": {
+        "vlnv": "xilinx.com:module_ref:calcul_param_1:1.0",
+        "xci_name": "design_1_calcul_param_1_0_0",
+        "xci_path": "ip\\design_1_calcul_param_1_0_0\\design_1_calcul_param_1_0_0.xci",
+        "inst_hier_path": "M5_parametre_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "calcul_param_1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_bclk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_100MHz",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_en": {
+            "direction": "I"
+          },
+          "i_ech": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "o_param": {
+            "direction": "O",
+            "left": "7",
             "right": "0"
           }
         }
@@ -1421,8 +1421,8 @@
           "M10_conversion_affichage/clk",
           "M6_parametre_2/i_bclk",
           "M7_parametre_3/i_bclk",
-          "M5_parametre_1/i_bclk",
-          "M8_commande/clk"
+          "M8_commande/clk",
+          "M5_parametre_1/i_bclk"
         ]
       },
       "i_data_1": {

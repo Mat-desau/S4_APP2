@@ -51,6 +51,7 @@ architecture Behavioral of calcul_param_1 is
 -- Signaux
 ----------------------------------------------------------------------------------
     
+    
 
 ---------------------------------------------------------------------------------------------
 --    Description comportementale
@@ -66,8 +67,10 @@ type fonction_etat is (
      );
      
     signal etat_present, etat_suivant: fonction_etat; 
-    signal compte : unsigned (7 downto 0);
-    signal compte_2 : unsigned (7 downto 0);
+    signal compte_reset : std_logic;
+    signal compte_en : std_logic;
+    signal compte_ini : unsigned (7 downto 0);
+    signal compte_next : unsigned (7 downto 0);
     signal param_mem : std_logic_vector (7 downto 0);   
 
 begin 
@@ -83,45 +86,68 @@ process(i_bclk, i_reset)
        end if;
 end process;
 
-process(etat_present, i_en, i_ech, compte)
+process(i_bclk, i_reset)
+    begin
+       if (compte_reset = '1') then
+             compte_ini <= "00000000";
+       else
+           if rising_edge(i_bclk) and compte_en = '1' then
+                 compte_ini <= compte_ini + 1 ;
+           end if;
+       end if;
+end process;
+
+process(etat_present, i_en, i_ech, compte_ini, i_bclk, param_mem)
 begin
     case etat_present is
         when init =>       
-            compte <= "00000000";
+            -- compte_ini <= "00000000";
             param_mem <= "00000000";
+            -- one <= "01";
+            compte_en <= '0';
+            compte_reset <= '1';
             etat_suivant <= att_enable;
             
         when att_enable =>
             if i_en = '1' and i_ech(23) = '0' then
+                compte_reset <= '0';
+                compte_en <= '0';
                 etat_suivant <= compte1;
             elsif i_en = '1' and i_ech(23) = '1' then
+                compte_reset <= '0';
+                compte_en <= '0';
                 etat_suivant <= fois2;
             else 
+                compte_reset <= '0';
+                compte_en <= '0';
                 etat_suivant <= att_enable;
             end if;
                 
         when compte1 =>
-            if compte = "11111111" then
+            if (compte_ini = "11111111" ) then
+                -- compte_en <= '1';
                 etat_suivant <= att_enable;
             else
-                compte <= compte +1 ;
+                compte_en <= '1';
                 etat_suivant <= att_enable;
             end if;
            
         when fois2 =>
-            if (compte < 2) then
+            if (compte_ini < 2) then
                etat_suivant <= reset;
             else
-                compte_2 <= compte + compte;
+                compte_next <= compte_ini + compte_ini;
                 etat_suivant <= save;
             end if;
          
         when save =>
-            param_mem <= std_logic_vector(compte_2); 
+            param_mem <= std_logic_vector(compte_next); 
             etat_suivant <= reset;
         
         when reset =>       
-            compte <= "00000000";
+            -- compte_ini <= "00000000";
+            -- compte_next <= "00000000";
+            compte_reset <= '1';
             etat_suivant <= att_enable;
                  
     end case;

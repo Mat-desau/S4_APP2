@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan 26 10:12:29 2024" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan 26 11:33:26 2024" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.0" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -38,8 +38,8 @@
         <CONNECTION INSTANCE="M10_conversion_affichage" PORT="clk"/>
         <CONNECTION INSTANCE="M6_parametre_2" PORT="i_bclk"/>
         <CONNECTION INSTANCE="M7_parametre_3" PORT="i_bclk"/>
-        <CONNECTION INSTANCE="M5_parametre_1" PORT="i_bclk"/>
         <CONNECTION INSTANCE="M8_commande" PORT="clk"/>
+        <CONNECTION INSTANCE="M5_parametre_1" PORT="i_bclk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="0" NAME="o_pbdat" RIGHT="0" SIGIS="undef" SIGNAME="M9_codeur_i2s_xlslice_0_Dout">
