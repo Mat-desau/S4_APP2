@@ -14,7 +14,6 @@ design_1_xlconstant_0_1.v,verilog,xil_defaultlib,../../../bd/design_1/ip/design_
 design_1_xlslice_0_0.v,verilog,xil_defaultlib,../../../bd/design_1/ip/design_1_xlslice_0_0/sim/design_1_xlslice_0_0.v,
 design_1_mux2_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_mux2_0_0/sim/design_1_mux2_0_0.vhd,
 design_1_affhexPmodSSD_v3_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_affhexPmodSSD_v3_0_0/sim/design_1_affhexPmodSSD_v3_0_0.vhd,
-design_1_calcul_param_2_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_calcul_param_2_0_0/sim/design_1_calcul_param_2_0_0.vhd,
 design_1_calcul_param_3_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_calcul_param_3_0_0/sim/design_1_calcul_param_3_0_0.vhd,
 design_1_mux4_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_mux4_0_0/sim/design_1_mux4_0_0.vhd,
 design_1_mux4_0_1.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_mux4_0_1/sim/design_1_mux4_0_1.vhd,
@@ -22,7 +21,8 @@ design_1_sig_fct_3_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_
 design_1_sig_fct_sat_dure_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_sig_fct_sat_dure_0_0/sim/design_1_sig_fct_sat_dure_0_0.vhd,
 design_1_sig_fct_sat_dure_0_1.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_sig_fct_sat_dure_0_1/sim/design_1_sig_fct_sat_dure_0_1.vhd,
 design_1_xlconstant_0_0.v,verilog,xil_defaultlib,../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v,
-design_1_calcul_param_1_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_calcul_param_1_0_0/sim/design_1_calcul_param_1_0_0.vhd,
 design_1_module_commande_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_module_commande_0_0/sim/design_1_module_commande_0_0.vhd,
+design_1_calcul_param_1_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_calcul_param_1_0_0/sim/design_1_calcul_param_1_0_0.vhd,
+design_1_calcul_param_2_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_calcul_param_2_0_0/sim/design_1_calcul_param_2_0_0.vhd,
 design_1.vhd,vhdl,xil_defaultlib,../../../bd/design_1/sim/design_1.vhd,
 glbl.v,Verilog,xil_defaultlib,glbl.v

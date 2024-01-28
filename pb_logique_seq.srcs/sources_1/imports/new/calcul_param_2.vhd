@@ -39,7 +39,7 @@ entity calcul_param_2 is
     i_reset   : in   std_logic;
     i_en      : in   std_logic;   -- un echantillon present
     i_ech     : in   std_logic_vector (23 downto 0);
-    o_param   : out  std_logic_vector (7 downto 0)                                     
+    o_param   : out  std_logic_vector (7 downto 0)                            
     );
 end calcul_param_2;
 
@@ -55,8 +55,84 @@ architecture Behavioral of calcul_param_2 is
 ---------------------------------------------------------------------------------------------
 --    Description comportementale
 ---------------------------------------------------------------------------------------------
+
+type fonction_etat is (
+     init,
+     att_en,
+     carre,
+     add,
+     send,
+     facteur
+     );
+     
+     signal etat_present, etat_suivant: fonction_etat;
+     signal ech_carre : signed (47 downto 0); 
+     signal entree    : signed (23 downto 0);
+     signal fctr : signed (47 downto 0);
+     signal fraction : signed (23 downto 0) := "011111000000000000000000"; 
+     signal sortie : signed (47 downto 0);
+     signal param_mem : std_logic_vector (7 downto 0); 
+
 begin 
 
-     o_param <= x"02";    -- temporaire ...
+process(i_bclk, i_reset)
+    begin
+       if (i_reset = '1') then
+             etat_present <= init;
+       else
+           if rising_edge(i_bclk) then
+                 etat_present <= etat_suivant;
+           end if;
+       end if;
+end process;
 
+process(etat_present, i_en, i_ech, entree, sortie, param_mem, fctr, fraction, ech_carre)
+begin
+    case etat_present is
+    
+        when init =>
+        
+            ech_carre <= ( others => '0');
+            fctr <= ( others => '0');
+            entree <= ( others => '0');
+            sortie <= ( others => '0');
+            
+            etat_suivant <= att_en;  
+            
+        when att_en =>
+        
+             if (i_en = '1') then
+                entree <= signed(i_ech);
+                etat_suivant <= carre;
+             else
+                etat_suivant <= att_en;
+             end if;
+            
+        when carre =>
+        
+            ech_carre <= entree * entree;
+            etat_suivant <= add;
+
+  
+        when add =>
+                sortie <= fctr + ech_carre;
+                etat_suivant <= send;
+        
+        when send =>
+        
+            param_mem <= std_logic_vector(sortie(47 downto 40));
+            etat_suivant <= facteur;
+        
+        when facteur =>
+        
+            fctr <= sortie(47 downto 24) * fraction;
+            etat_suivant <= att_en;     
+        
+             
+    end case;
+    
+ end process;   
+ 
+  o_param <= param_mem;
+     
 end Behavioral;
