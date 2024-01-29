@@ -822,3 +822,9 @@ Time resolution is 1 ps
 relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 2151.305 ; gain = 0.000
 run 1 s
 run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:35 . Memory (MB): peak = 2151.305 ; gain = 0.000
+open_bd_design {K:/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2177.051 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 29 12:43:58 2024...

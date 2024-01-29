@@ -43,3 +43,5 @@ source simul_module_sig_tb.tcl
 run 600 us
 relaunch_sim
 run 1 s
+open_bd_design {K:/S4_APP2/pb_logique_seq.srcs/sources_1/bd/design_1/design_1.bd}
+close_sim
