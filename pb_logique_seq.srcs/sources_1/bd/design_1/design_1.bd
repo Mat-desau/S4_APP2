@@ -12,34 +12,34 @@
     },
     "design_tree": {
       "M1_decodeur_i2s": {
+        "xlconstant_0": "",
+        "xlconstant_1": "",
         "compteur_7bits": "",
         "registre_24bits_droite": "",
         "registre_24bits_gauche": "",
         "registre_decalage_24bits": "",
-        "xlconstant_0": "",
-        "xlconstant_1": "",
         "MEF_decodeur_i2s": ""
       },
       "M9_codeur_i2s": {
-        "compteur_nbits_0": "",
-        "mef_cod_i2s_vsb_0": "",
-        "reg_dec_24b_fd_0": "",
         "util_vector_logic_0": "",
         "xlconcat_0": "",
         "xlconstant_0": "",
         "xlslice_0": "",
+        "compteur_nbits_0": "",
+        "mef_cod_i2s_vsb_0": "",
+        "reg_dec_24b_fd_0": "",
         "mux2_0": ""
       },
       "M10_conversion_affichage": "",
+      "parametre_0": "",
+      "M5_parametre_1": "",
       "M7_parametre_3": "",
       "Multiplexeur_choix_fonction": "",
       "Multiplexeur_choix_parametre": "",
       "M4_fonction3": "",
       "M2_fonction_distortion_dure1": "",
       "M3_fonction_distorsion_dure2": "",
-      "parametre_0": "",
       "M8_commande": "",
-      "M5_parametre_1": "",
       "M6_parametre_2": ""
     },
     "ports": {
@@ -140,6 +140,28 @@
           }
         },
         "components": {
+          "xlconstant_0": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "design_1_xlconstant_0_2",
+            "xci_path": "ip\\design_1_xlconstant_0_2\\design_1_xlconstant_0_2.xci",
+            "inst_hier_path": "M1_decodeur_i2s/xlconstant_0",
+            "parameters": {
+              "CONST_VAL": {
+                "value": "0"
+              }
+            }
+          },
+          "xlconstant_1": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "design_1_xlconstant_0_3",
+            "xci_path": "ip\\design_1_xlconstant_0_3\\design_1_xlconstant_0_3.xci",
+            "inst_hier_path": "M1_decodeur_i2s/xlconstant_1",
+            "parameters": {
+              "CONST_WIDTH": {
+                "value": "24"
+              }
+            }
+          },
           "compteur_7bits": {
             "vlnv": "xilinx.com:module_ref:compteur_nbits:1.0",
             "xci_name": "design_1_compteur_nbits_0_0",
@@ -338,28 +360,6 @@
               }
             }
           },
-          "xlconstant_0": {
-            "vlnv": "xilinx.com:ip:xlconstant:1.1",
-            "xci_name": "design_1_xlconstant_0_2",
-            "xci_path": "ip\\design_1_xlconstant_0_2\\design_1_xlconstant_0_2.xci",
-            "inst_hier_path": "M1_decodeur_i2s/xlconstant_0",
-            "parameters": {
-              "CONST_VAL": {
-                "value": "0"
-              }
-            }
-          },
-          "xlconstant_1": {
-            "vlnv": "xilinx.com:ip:xlconstant:1.1",
-            "xci_name": "design_1_xlconstant_0_3",
-            "xci_path": "ip\\design_1_xlconstant_0_3\\design_1_xlconstant_0_3.xci",
-            "inst_hier_path": "M1_decodeur_i2s/xlconstant_1",
-            "parameters": {
-              "CONST_WIDTH": {
-                "value": "24"
-              }
-            }
-          },
           "MEF_decodeur_i2s": {
             "vlnv": "xilinx.com:module_ref:mef_decod_i2s_v1b:1.0",
             "xci_name": "design_1_mef_decod_i2s_v1b_0_0",
@@ -550,6 +550,52 @@
           }
         },
         "components": {
+          "util_vector_logic_0": {
+            "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+            "xci_name": "design_1_util_vector_logic_0_0",
+            "xci_path": "ip\\design_1_util_vector_logic_0_0\\design_1_util_vector_logic_0_0.xci",
+            "inst_hier_path": "M9_codeur_i2s/util_vector_logic_0",
+            "parameters": {
+              "C_OPERATION": {
+                "value": "or"
+              },
+              "C_SIZE": {
+                "value": "1"
+              }
+            }
+          },
+          "xlconcat_0": {
+            "vlnv": "xilinx.com:ip:xlconcat:2.1",
+            "xci_name": "design_1_xlconcat_0_0",
+            "xci_path": "ip\\design_1_xlconcat_0_0\\design_1_xlconcat_0_0.xci",
+            "inst_hier_path": "M9_codeur_i2s/xlconcat_0"
+          },
+          "xlconstant_0": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "design_1_xlconstant_0_1",
+            "xci_path": "ip\\design_1_xlconstant_0_1\\design_1_xlconstant_0_1.xci",
+            "inst_hier_path": "M9_codeur_i2s/xlconstant_0"
+          },
+          "xlslice_0": {
+            "vlnv": "xilinx.com:ip:xlslice:1.0",
+            "xci_name": "design_1_xlslice_0_0",
+            "xci_path": "ip\\design_1_xlslice_0_0\\design_1_xlslice_0_0.xci",
+            "inst_hier_path": "M9_codeur_i2s/xlslice_0",
+            "parameters": {
+              "DIN_FROM": {
+                "value": "23"
+              },
+              "DIN_TO": {
+                "value": "23"
+              },
+              "DIN_WIDTH": {
+                "value": "24"
+              },
+              "DOUT_WIDTH": {
+                "value": "1"
+              }
+            }
+          },
           "compteur_nbits_0": {
             "vlnv": "xilinx.com:module_ref:compteur_nbits:1.0",
             "xci_name": "design_1_compteur_nbits_0_1",
@@ -734,52 +780,6 @@
                 "direction": "O",
                 "left": "23",
                 "right": "0"
-              }
-            }
-          },
-          "util_vector_logic_0": {
-            "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-            "xci_name": "design_1_util_vector_logic_0_0",
-            "xci_path": "ip\\design_1_util_vector_logic_0_0\\design_1_util_vector_logic_0_0.xci",
-            "inst_hier_path": "M9_codeur_i2s/util_vector_logic_0",
-            "parameters": {
-              "C_OPERATION": {
-                "value": "or"
-              },
-              "C_SIZE": {
-                "value": "1"
-              }
-            }
-          },
-          "xlconcat_0": {
-            "vlnv": "xilinx.com:ip:xlconcat:2.1",
-            "xci_name": "design_1_xlconcat_0_0",
-            "xci_path": "ip\\design_1_xlconcat_0_0\\design_1_xlconcat_0_0.xci",
-            "inst_hier_path": "M9_codeur_i2s/xlconcat_0"
-          },
-          "xlconstant_0": {
-            "vlnv": "xilinx.com:ip:xlconstant:1.1",
-            "xci_name": "design_1_xlconstant_0_1",
-            "xci_path": "ip\\design_1_xlconstant_0_1\\design_1_xlconstant_0_1.xci",
-            "inst_hier_path": "M9_codeur_i2s/xlconstant_0"
-          },
-          "xlslice_0": {
-            "vlnv": "xilinx.com:ip:xlslice:1.0",
-            "xci_name": "design_1_xlslice_0_0",
-            "xci_path": "ip\\design_1_xlslice_0_0\\design_1_xlslice_0_0.xci",
-            "inst_hier_path": "M9_codeur_i2s/xlslice_0",
-            "parameters": {
-              "DIN_FROM": {
-                "value": "23"
-              },
-              "DIN_TO": {
-                "value": "23"
-              },
-              "DIN_WIDTH": {
-                "value": "24"
-              },
-              "DOUT_WIDTH": {
-                "value": "1"
               }
             }
           },
@@ -972,6 +972,67 @@
             "right": "0"
           },
           "JPmod": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "parametre_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_0_0",
+        "xci_path": "ip\\design_1_xlconstant_0_0\\design_1_xlconstant_0_0.xci",
+        "inst_hier_path": "parametre_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "8"
+          }
+        }
+      },
+      "M5_parametre_1": {
+        "vlnv": "xilinx.com:module_ref:calcul_param_1:1.0",
+        "xci_name": "design_1_calcul_param_1_0_0",
+        "xci_path": "ip\\design_1_calcul_param_1_0_0\\design_1_calcul_param_1_0_0.xci",
+        "inst_hier_path": "M5_parametre_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "calcul_param_1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_bclk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_100MHz",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_en": {
+            "direction": "I"
+          },
+          "i_ech": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "o_param": {
             "direction": "O",
             "left": "7",
             "right": "0"
@@ -1190,20 +1251,6 @@
           }
         }
       },
-      "parametre_0": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "design_1_xlconstant_0_0",
-        "xci_path": "ip\\design_1_xlconstant_0_0\\design_1_xlconstant_0_0.xci",
-        "inst_hier_path": "parametre_0",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "0"
-          },
-          "CONST_WIDTH": {
-            "value": "8"
-          }
-        }
-      },
       "M8_commande": {
         "vlnv": "xilinx.com:module_ref:module_commande:1.0",
         "xci_name": "design_1_module_commande_0_0",
@@ -1256,53 +1303,6 @@
           "o_selection_par": {
             "direction": "O",
             "left": "1",
-            "right": "0"
-          }
-        }
-      },
-      "M5_parametre_1": {
-        "vlnv": "xilinx.com:module_ref:calcul_param_1:1.0",
-        "xci_name": "design_1_calcul_param_1_0_0",
-        "xci_path": "ip\\design_1_calcul_param_1_0_0\\design_1_calcul_param_1_0_0.xci",
-        "inst_hier_path": "M5_parametre_1",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "calcul_param_1",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "i_bclk": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "PHASE": {
-                "value": "0.000",
-                "value_src": "default_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_clk_100MHz",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "i_reset": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "i_en": {
-            "direction": "I"
-          },
-          "i_ech": {
-            "direction": "I",
-            "left": "23",
-            "right": "0"
-          },
-          "o_param": {
-            "direction": "O",
-            "left": "7",
             "right": "0"
           }
         }
@@ -1408,8 +1408,8 @@
       "decodeur_i2s_o_str_dat": {
         "ports": [
           "M1_decodeur_i2s/o_str_dat",
-          "M7_parametre_3/i_en",
           "M5_parametre_1/i_en",
+          "M7_parametre_3/i_en",
           "M6_parametre_2/i_en"
         ]
       },
@@ -1419,9 +1419,9 @@
           "M1_decodeur_i2s/clk",
           "M9_codeur_i2s/i_bclk",
           "M10_conversion_affichage/clk",
+          "M5_parametre_1/i_bclk",
           "M7_parametre_3/i_bclk",
           "M8_commande/clk",
-          "M5_parametre_1/i_bclk",
           "M6_parametre_2/i_bclk"
         ]
       },
@@ -1467,8 +1467,8 @@
         "ports": [
           "Multiplexeur_choix_fonction/output0",
           "M9_codeur_i2s/i_dat_right",
-          "M7_parametre_3/i_ech",
           "M5_parametre_1/i_ech",
+          "M7_parametre_3/i_ech",
           "M6_parametre_2/i_ech"
         ]
       },
@@ -1506,8 +1506,8 @@
           "M1_decodeur_i2s/i_reset",
           "M9_codeur_i2s/i_reset",
           "M10_conversion_affichage/reset",
-          "M7_parametre_3/i_reset",
           "M5_parametre_1/i_reset",
+          "M7_parametre_3/i_reset",
           "M6_parametre_2/i_reset"
         ]
       },

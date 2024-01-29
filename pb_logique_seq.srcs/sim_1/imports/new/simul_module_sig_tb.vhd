@@ -35,7 +35,7 @@ file leftInputFile : text;
 file rightInputFile : text;
 --Chemin depuis le fichier de simulation les fichiers se trouvent à la racine du projet
 constant leftInputFileName : string := "../../../../leftInput.txt"; 
-constant rightInputFileName : string := "../../../../SignalHexa_1000Hz.txt";
+constant rightInputFileName : string := "../../../../SignalHexa.txt";
 
 shared variable fstatusLeft : file_open_status := NAME_ERROR;
 shared variable fstatusRight : file_open_status := NAME_ERROR;
