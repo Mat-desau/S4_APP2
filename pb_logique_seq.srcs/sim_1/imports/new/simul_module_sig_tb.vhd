@@ -34,8 +34,14 @@ architecture Behavioral of simul_module_sig_tb is
 file leftInputFile : text;
 file rightInputFile : text;
 --Chemin depuis le fichier de simulation les fichiers se trouvent à la racine du projet
-constant leftInputFileName : string := "../../../../leftInput.txt"; 
-constant rightInputFileName : string := "../../../../SignalHexa.txt";
+-- Regulier
+-- constant leftInputFileName : string := "../../../../leftInput.txt"; 
+-- constant rightInputFileName : string := "../../../../SignalHexa_1000Hz.txt";
+-- Test Bench Décodage
+constant leftInputFileName : string := "../../../../Test_Bench_Left.txt"; 
+constant rightInputFileName : string := "../../../../Test_Bench_Right.txt";
+-- Test Bench everything
+-- constant rightInputFileName : string := "../../../../SignalHexa.txt";
 
 shared variable fstatusLeft : file_open_status := NAME_ERROR;
 shared variable fstatusRight : file_open_status := NAME_ERROR;
