@@ -38,10 +38,16 @@ file rightInputFile : text;
 -- constant leftInputFileName : string := "../../../../leftInput.txt"; 
 -- constant rightInputFileName : string := "../../../../SignalHexa_1000Hz.txt";
 -- Test Bench Décodage
-constant leftInputFileName : string := "../../../../Test_Bench_Left.txt"; 
-constant rightInputFileName : string := "../../../../Test_Bench_Right.txt";
+-- constant leftInputFileName : string := "../../../../Test_Bench_Left.txt"; 
+-- constant rightInputFileName : string := "../../../../Test_Bench_Right.txt";
 -- Test Bench everything
--- constant rightInputFileName : string := "../../../../SignalHexa.txt";
+constant leftInputFileName : string := "../../../../leftInput.txt"; 
+constant rightInputFileName : string := "../../../../SignalHexa_Test_100.txt";
+--constant rightInputFileName : string := "../../../../SignalHexa_Test_189.txt";
+--constant rightInputFileName : string := "../../../../SignalHexa_Test_4000.txt";
+--constant rightInputFileName : string := "../../../../SignalHexa_Test_10000.txt";
+--constant rightInputFileName : string := "../../../../SignalHexa_Test_24000.txt";
+--constant rightInputFileName : string := "../../../../SignalHexa_Test.txt";
 
 shared variable fstatusLeft : file_open_status := NAME_ERROR;
 shared variable fstatusRight : file_open_status := NAME_ERROR;

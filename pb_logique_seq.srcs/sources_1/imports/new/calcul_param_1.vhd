@@ -101,9 +101,7 @@ process(etat_present, i_en, i_ech, compte_ini, i_bclk, param_mem)
 begin
     case etat_present is
         when init =>       
-            -- compte_ini <= "00000000";
             param_mem <= "00000000";
-            -- one <= "01";
             compte_en <= '0';
             compte_reset <= '1';
             etat_suivant <= att_enable;
@@ -125,7 +123,6 @@ begin
                 
         when compte1 =>
             if (compte_ini = "11111111" ) then
-                -- compte_en <= '1';
                 etat_suivant <= att_enable;
             else
                 compte_en <= '1';
@@ -136,7 +133,7 @@ begin
             if (compte_ini < 2) then
                etat_suivant <= reset;
             else
-                compte_next <= compte_ini + compte_ini;
+                compte_next <= (compte_ini) + (compte_ini);
                 etat_suivant <= save;
             end if;
          
@@ -145,8 +142,6 @@ begin
             etat_suivant <= reset;
         
         when reset =>       
-            -- compte_ini <= "00000000";
-            -- compte_next <= "00000000";
             compte_reset <= '1';
             etat_suivant <= att_enable;
                  
@@ -155,27 +150,5 @@ begin
 end process;
 
     o_param <= param_mem;
---process(etat_present)
---begin
---    case etat_present is
---        when init =>       
-            
-          
---        when att_enable =>
-          
-            
---        when compte1 =>
-           
-
---        when fois2 =>
-            
-         
---        when save =>
-              
---    end case;
-    
---end process;
-
-
  
 end Behavioral;
