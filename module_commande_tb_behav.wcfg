@@ -11,36 +11,41 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="13249132490fs"></ZoomStartTime>
-      <ZoomEndTime time="26529132491fs"></ZoomEndTime>
-      <Cursor1Time time="13155820357fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="25001000001fs"></ZoomEndTime>
+      <Cursor1Time time="24731173170fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="207"></NameColumnWidth>
-      <ValueColumnWidth column_width="63"></ValueColumnWidth>
+      <NameColumnWidth column_width="148"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="5" />
-   <wvobject fp_name="/simul_module_sig_tb/UUT_mod_sig/M6_parametre_2/i_bclk" type="logic">
+   <WVObjectSize size="6" />
+   <wvobject fp_name="/simul_module_sig_tb/UUT_mod_sig/M5_parametre_1/i_bclk" type="logic">
       <obj_property name="ElementShortName">i_bclk</obj_property>
       <obj_property name="ObjectShortName">i_bclk</obj_property>
    </wvobject>
-   <wvobject fp_name="/simul_module_sig_tb/UUT_mod_sig/M6_parametre_2/i_reset" type="logic">
+   <wvobject fp_name="/simul_module_sig_tb/UUT_mod_sig/M5_parametre_1/i_reset" type="logic">
       <obj_property name="ElementShortName">i_reset</obj_property>
       <obj_property name="ObjectShortName">i_reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/simul_module_sig_tb/UUT_mod_sig/M6_parametre_2/i_en" type="logic">
+   <wvobject fp_name="/simul_module_sig_tb/UUT_mod_sig/M5_parametre_1/i_en" type="logic">
       <obj_property name="ElementShortName">i_en</obj_property>
       <obj_property name="ObjectShortName">i_en</obj_property>
    </wvobject>
-   <wvobject fp_name="/simul_module_sig_tb/UUT_mod_sig/M6_parametre_2/i_ech" type="array">
+   <wvobject fp_name="/simul_module_sig_tb/UUT_mod_sig/M5_parametre_1/i_ech" type="array">
       <obj_property name="ElementShortName">i_ech[23:0]</obj_property>
       <obj_property name="ObjectShortName">i_ech[23:0]</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/simul_module_sig_tb/UUT_mod_sig/M6_parametre_2/o_param" type="array">
+   <wvobject fp_name="/simul_module_sig_tb/UUT_mod_sig/M5_parametre_1/o_param" type="array">
       <obj_property name="ElementShortName">o_param[7:0]</obj_property>
       <obj_property name="ObjectShortName">o_param[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_module_sig_tb/UUT_mod_sig/M5_parametre_1/U0/compte_ini" type="array">
+      <obj_property name="ElementShortName">compte_ini[7:0]</obj_property>
+      <obj_property name="ObjectShortName">compte_ini[7:0]</obj_property>
    </wvobject>
 </wave_config>

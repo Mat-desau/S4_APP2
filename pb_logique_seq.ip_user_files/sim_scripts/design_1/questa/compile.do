@@ -57,7 +57,6 @@ vlog -work xil_defaultlib  \
 "../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
 
 vcom -work xil_defaultlib  -93 \
-"../../../bd/design_1/ip/design_1_calcul_param_1_0_0/sim/design_1_calcul_param_1_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_calcul_param_3_0_0/sim/design_1_calcul_param_3_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_mux4_0_0/sim/design_1_mux4_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_mux4_0_1/sim/design_1_mux4_0_1.vhd" \
@@ -66,6 +65,7 @@ vcom -work xil_defaultlib  -93 \
 "../../../bd/design_1/ip/design_1_sig_fct_sat_dure_0_1/sim/design_1_sig_fct_sat_dure_0_1.vhd" \
 "../../../bd/design_1/ip/design_1_module_commande_0_0/sim/design_1_module_commande_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_calcul_param_2_0_0/sim/design_1_calcul_param_2_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_calcul_param_1_0_0/sim/design_1_calcul_param_1_0_0.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
 
 vlog -work xil_defaultlib \

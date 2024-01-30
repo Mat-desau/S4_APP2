@@ -9,7 +9,7 @@ Updated on Fri May 20 03:52:45 2022
 import numpy as np
 from matplotlib import pyplot as plt
 
-f = 4000      # Fréquence en Hz
+f = 189      # Fréquence en Hz
 fs = 48000       # Fréquence d'échantillonnage
 ne = int(((1/f)/(1/fs)))          # Nombre d'échantillons
 print(ne)
@@ -44,10 +44,10 @@ plt.plot(t,[int(y_i,16) for y_i in y_hex],2)
 #f_vhdl = open("SignalHexa_Test_{}.txt".format(f), "a")
 f_vhdl = open("SignalHexa_Test.txt", "a")
 
-#for x in range(0, 6):
-for i in range(len(y_hex)):
-    data = "{}".format(y_hex[i])
-    f_vhdl.write(data)
-    f_vhdl.write("\n")
+for x in range(0, 40):
+    for i in range(len(y_hex)):
+        data = "{}".format(y_hex[i])
+        f_vhdl.write(data)
+        f_vhdl.write("\n")
 
 f_vhdl.close()
