@@ -9,9 +9,10 @@ Updated on Fri May 20 03:52:45 2022
 import numpy as np
 from matplotlib import pyplot as plt
 
-f = 189      # Fréquence en Hz
+f = 24000      # Fréquence en Hz
 fs = 48000       # Fréquence d'échantillonnage
-ne = int(((1/f)/(1/fs)))          # Nombre d'échantillons
+ne = 10
+#ne = int(((1/f)/(1/fs)))          # Nombre d'échantillons
 print(ne)
 
 def twosCom_dec2Hex24(dec):
@@ -26,10 +27,11 @@ def twosCom_dec2Hex24(dec):
 
 # Création du sinus
 t = np.arange(ne)
-#y = 0.99*np.sin(f*(2*np.pi*t)/(fs+0.5*np.pi))
-y = 0.99*np.sin(f*(2*np.pi*t)/(fs))
+y = 0.99*np.sin(f*(2*np.pi*t)/(fs+0.5*np.pi))
+#y = 0.99*np.sin(f*(2*np.pi*t)/(fs))
 
-#plt.plot(t,y)
+plt.plot(t,y)
+plt.show()
 
 # Conversion en héxadécimal
 y_int = [int(y_i*pow(2, 23)) for y_i in y]
@@ -41,8 +43,8 @@ plt.plot(t,[int(y_i,16) for y_i in y_hex],2)
 
 # Écriture dans le format pour VHDL
 
-#f_vhdl = open("SignalHexa_Test_{}.txt".format(f), "a")
-f_vhdl = open("SignalHexa_Test.txt", "a")
+f_vhdl = open("SignalHexa_Test_{}.txt".format(f), "a")
+#f_vhdl = open("SignalHexa_Test.txt", "a")
 
 for x in range(0, 40):
     for i in range(len(y_hex)):
@@ -51,3 +53,5 @@ for x in range(0, 40):
         f_vhdl.write("\n")
 
 f_vhdl.close()
+
+#plt.show()
