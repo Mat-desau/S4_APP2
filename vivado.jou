@@ -106,3 +106,59 @@ save_wave_config {C:/Users/PC/Documents/GitHub/S4_APP2/module_commande_tb_behav.
 save_wave_config {C:/Users/PC/Documents/GitHub/S4_APP2/module_commande_tb_behav.wcfg}
 save_wave_config {C:/Users/PC/Documents/GitHub/S4_APP2/module_commande_tb_behav.wcfg}
 save_wave_config {C:/Users/PC/Documents/GitHub/S4_APP2/module_commande_tb_behav.wcfg}
+relaunch_sim
+run 1 ms
+relaunch_sim
+run 200 us
+relaunch_sim
+run 200 us
+relaunch_sim
+run 200 us
+relaunch_sim
+run 200 us
+relaunch_sim
+run 200 us
+relaunch_sim
+run 25 ms
+save_wave_config {C:/Users/PC/Documents/GitHub/S4_APP2/module_commande_tb_behav.wcfg}
+relaunch_sim
+run 25 ms
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 1 us
+run 500 us
+relaunch_sim
+run 500 us
+relaunch_sim
+run 500 us
+run 25 ms
+relaunch_sim
+run 25 ms
+relaunch_sim
+run 25 ms
+relaunch_sim
+run 25 ms
+relaunch_sim
+run 25 ms
+relaunch_sim
+run 25 ms
+relaunch_sim
+run 35 ms
+run 45 ms
+relaunch_sim
+run 45 ms
+relaunch_sim
+relaunch_sim
+run 45 ms
+relaunch_sim
