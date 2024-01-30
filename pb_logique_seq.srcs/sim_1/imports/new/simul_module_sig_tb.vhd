@@ -42,13 +42,13 @@ file rightInputFile : text;
 -- constant rightInputFileName : string := "../../../../Test_Bench_Right.txt";
 -- Test Bench everything
 constant leftInputFileName : string := "../../../../leftInput.txt"; 
-constant rightInputFileName : string := "../../../../SignalHexa_Test_20.txt";
+--constant rightInputFileName : string := "../../../../SignalHexa_Test_20.txt";
 --constant rightInputFileName : string := "../../../../SignalHexa_Test_189.txt";
 --constant rightInputFileName : string := "../../../../SignalHexa_Test_4000.txt";
 --constant rightInputFileName : string := "../../../../SignalHexa_Test_10000.txt";
 --constant rightInputFileName : string := "../../../../SignalHexa_Test_24000.txt";
 --constant rightInputFileName : string := "../../../../SignalHexa_Test.txt";
---constant rightInputFileName : string := "../../../../SignalHexa_Test2.txt";
+constant rightInputFileName : string := "../../../../SignalHexa_Test2.txt";
 
 shared variable fstatusLeft : file_open_status := NAME_ERROR;
 shared variable fstatusRight : file_open_status := NAME_ERROR;

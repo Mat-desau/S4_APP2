@@ -9,7 +9,7 @@ Updated on Fri May 20 03:52:45 2022
 import numpy as np
 from matplotlib import pyplot as plt
 
-f = 20      # Fréquence en Hz
+f = 20000      # Fréquence en Hz
 fs = 48000       # Fréquence d'échantillonnage
 #ne = 10
 ne = int(((1/f)/(1/fs)))          # Nombre d'échantillons
@@ -28,8 +28,8 @@ def twosCom_dec2Hex24(dec):
 # Création du sinus
 t = np.arange(ne)
 #
-#y = 0.99*np.sin((f*(2*np.pi*t)/(fs))+(0.1*np.pi))
-y = 0.99*np.sin(f*(2*np.pi*t)/(fs))
+y = 0.99*np.sin((f*(2*np.pi*t)/(fs))+(0.1*np.pi))
+#y = 0.99*np.sin(f*(2*np.pi*t)/(fs))
 
 plt.plot(t,y)
 #plt.show()
@@ -47,7 +47,7 @@ plt.plot(t,[int(y_i,16) for y_i in y_hex],2)
 f_vhdl = open("SignalHexa_Test_{}.txt".format(f), "a")
 #f_vhdl = open("SignalHexa_Test2.txt", "a")
 
-for x in range(0, 3):
+for x in range(0, 35):
     for i in range(len(y_hex)):
         data = "{}".format(y_hex[i])
         f_vhdl.write(data)
